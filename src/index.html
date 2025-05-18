@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MerzCham - Вкуснейшие Галушки и Пельмени</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- Добавьте сюда favicon, если есть: <link rel="icon" href="images/favicon.ico"> -->
+    </head>
+    <body>
+        <!-- Navbar (Шапка сайта) -->
+        <nav class="navbar">
+            <div class="container navbar-content">
+                <a href="#hero" class="logo">MerzCham</a>
+                <ul class="nav-links">
+                    <li><a href="#about">О Нас</a></li>
+                    <li class="dropdown">
+                        <a href="#menu" class="dropbtn"
+                            >Меню <span class="arrow-icon">▼</span></a
+                        >
+                        <div class="dropdown-content">
+                            <a href="#menu-galushki">Галушки</a>
+                            <a href="#menu-pelmeni">Пельмени</a>
+                            <a href="#menu-specials">Спецпредложения</a>
+                        </div>
+                    </li>
+                    <li><a href="#delivery">Доставка и Оплата</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                <div class="navbar-contact-info">
+                    <p>ул. Вкусная, 1</p>
+                    <p>+7 (999) 123-45-67</p>
+                </div>
+                <button class="burger-menu" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Приветственная секция (Hero) -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h1>Добро пожаловать в MerzCham!</h1>
+                <p>
+                    Насладитесь настоящим вкусом домашних галушек и пельменей,
+                    приготовленных с любовью.
+                </p>
+                <a href="#menu" class="btn btn-primary">Смотреть Меню</a>
+            </div>
+        </section>
+
+        <!-- Секция "О Нас" -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>О MerzCham</h2>
+                <p>
+                    Мы - команда энтузиастов, влюбленных в традиционную кухню.
+                    Каждое наше блюдо – это результат многолетнего опыта,
+                    отборных ингредиентов и секретных семейных рецептов. Мы
+                    верим, что еда должна приносить радость и объединять людей.
+                </p>
+                <div class="about-features">
+                    <div
+                        class="feature-item"
+                        data-animation="fadeInUp 1s ease-out 0.2s"
+                    >
+                        <img
+                            src="https://cdn-icons-png.flaticon.com/512/3967/3967356.png"
+                            alt="Свежие ингредиенты"
+                            class="feature-icon"
+                        />
+                        <h3>Свежие Ингредиенты</h3>
+                        <p>
+                            Только лучшие продукты от проверенных поставщиков.
+                        </p>
+                    </div>
+                    <div
+                        class="feature-item"
+                        data-animation="fadeInUp 1s ease-out 0.4s"
+                    >
+                        <img
+                            src="https://img.freepik.com/premium-vector/hand-modeling-plasticine-sculpture-flat-icon_444196-9755.jpg"
+                            alt="Ручная лепка"
+                            class="feature-icon"
+                        />
+                        <h3>Ручная Лепка</h3>
+                        <p>
+                            Каждая галушка и пельмень слеплены вручную с душой.
+                        </p>
+                    </div>
+                    <div
+                        class="feature-item"
+                        data-animation="fadeInUp 1s ease-out 0.6s"
+                    >
+                        <img
+                            src="https://cdn-icons-png.flaticon.com/512/2203/2203124.png"
+                            alt="Быстрая доставка"
+                            class="feature-icon"
+                        />
+                        <h3>Быстрая Доставка</h3>
+                        <p>Горячие блюда прямо к вашему столу.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Меню" -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <h2>Наше Меню</h2>
+
+                <div id="menu-galushki" class="menu-category">
+                    <h3>Галушки</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <img
+                                src="https://vaydaar.ru/wp-content/uploads/2024/03/%D0%B3%D0%B0%D0%BB%D1%83%D1%88%D0%BA%D0%B8.png"
+                                alt="Галушки Классические"
+                            />
+                            <h4>Галушки "Классические"</h4>
+                            <p class="description">
+                                Нежные галушки по старинному рецепту.
+                            </p>
+                            <p class="price">350 руб.</p>
+                            <button class="btn btn-secondary">Заказать</button>
+                        </div>
+                        <!-- <div class="menu-item">
+                            <img
+                                src="images/galushka2.jpg"
+                                alt="Галушки с Сыром"
+                            />
+                            <h4>Галушки "С Сыром"</h4>
+                            <p class="description">
+                                Ароматные галушки с тянущимся сыром.
+                            </p>
+                            <p class="price">400 руб.</p>
+                            <button class="btn btn-secondary">Заказать</button>
+                        </div> -->
+                        <!-- <div class="menu-item">
+                            <img
+                                src="images/galushka3.jpg"
+                                alt="Галушки с Грибами"
+                            />
+                            <h4>Галушки "С Грибами"</h4>
+                            <p class="description">
+                                Сытные галушки с лесными грибами и сметаной.
+                            </p>
+                            <p class="price">420 руб.</p>
+                            <button class="btn btn-secondary">Заказать</button>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div id="menu-pelmeni" class="menu-category">
+                    <h3>Пельмени</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <img
+                                src="https://mega-tray.ru/templates/yootheme/cache/2a/4016-pelmeni-1080-2a808c93.jpeg"
+                                alt="Пельмени классические"
+                            />
+                            <h4>Пельмени "Классические"</h4>
+                            <p class="description">
+                                Сочные пельмени с отборным мясом
+                                (свинина-говядина).
+                            </p>
+                            <p class="price">450 руб.</p>
+                            <button class="btn btn-secondary">Заказать</button>
+                        </div>
+                        <!-- <div class="menu-item">
+                            <img
+                                src="images/pelmeni2.jpg"
+                                alt="Пельмени с Курицей"
+                            />
+                            <h4>Пельмени "Нежные"</h4>
+                            <p class="description">
+                                Легкие пельмени с куриным филе и зеленью.
+                            </p>
+                            <p class="price">430 руб.</p>
+                            <button class="btn btn-secondary">Заказать</button>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div id="menu-specials" class="menu-category">
+                    <h3>Спецпредложения</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item special-offer">
+                            <img src="images/special1.jpg" alt="Комбо Обед" />
+                            <h4>Комбо "Обед Чемпиона"</h4>
+                            <p class="description">
+                                Галушки "Классические" + Пельмени "Классические"
+                                + Домашний морс.
+                            </p>
+                            <p class="price old-price">850 руб.</p>
+                            <p class="price">750 руб.</p>
+                            <button class="btn btn-secondary">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Доставка и Оплата" -->
+        <section id="delivery" class="delivery-section">
+            <div class="container">
+                <h2>Доставка и Оплата</h2>
+                <div class="delivery-info">
+                    <div class="delivery-text">
+                        <p>
+                            Мы доставляем наши горячие и вкусные блюда по всему
+                            городу!
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Зоны доставки:</strong> Центральный
+                                район, Северный, Южный (уточняйте у оператора
+                                для других районов).
+                            </li>
+                            <li>
+                                <strong>Стоимость доставки:</strong> от 150 руб.
+                                Бесплатно при заказе от 1500 руб.
+                            </li>
+                            <li>
+                                <strong>Время доставки:</strong> 45-90 минут.
+                            </li>
+                        </ul>
+                        <h3>Способы оплаты:</h3>
+                        <ul class="payment-methods">
+                            <li>
+                                <img
+                                    src="https://lh4.googleusercontent.com/proxy/2qy5cAg-oCgY-cyQh0CUoIlgjeMlJFXU9phL5rX8fLNUMkgc3-A2zdUPfWJxMXSC4Jixlc9sAJae_jr73To883usiLIEZXMg3yA7LIuny0E7FiemKrEimGAGXTKyIfKosIzHJk12bM8"
+                                    alt="Наличные"
+                                />
+                                Наличными курьеру
+                            </li>
+                            <!-- <li>
+                                <img
+                                    src="images/payment-card.svg"
+                                    alt="Картой курьеру"
+                                />
+                                Картой курьеру (Visa, Mastercard, Мир)
+                            </li> -->
+                            <li>
+                                <img
+                                    src="https://webim.ru/static/images/cases/case-tinkoff.png.webp"
+                                    alt="Тинькофф Оплата"
+                                />
+                                Тинькофф Оплата (онлайн)
+                            </li>
+                            <li>
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/ru/thumb/c/c7/%D0%A1%D0%91%D0%9F_%D0%BB%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF.svg/1200px-%D0%A1%D0%91%D0%9F_%D0%BB%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF.svg.png"
+                                    alt="СБП"
+                                />
+                                Система Быстрых Платежей (СБП)
+                            </li>
+                            <li>
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/SberPay.png"
+                                    alt="СберПэй"
+                                />
+                                СберПэй (онлайн)
+                            </li>
+                            <li>
+                                <img
+                                    src="https://cdn-edge.kwork.ru/pics/t3/13/19312495-1651859846.jpg"
+                                    alt="ЮКасса"
+                                />
+                                ЮKassa (другие онлайн-способы)
+                            </li>
+                        </ul>
+                        <p>
+                            Для оформления заказа звоните:
+                            <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                        </p>
+                    </div>
+                    <div class="delivery-image">
+                        <img
+                            src="https://www.profreshenie.com/articles/february%202016/2.jpg"
+                            alt="Курьер с заказом"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Отзывы" -->
+        <section id="reviews" class="reviews-section">
+            <div class="container">
+                <h2>Отзывы Наших Клиентов</h2>
+                <div class="reviews-grid">
+                    <div class="review-item">
+                        <p>
+                            "Это лучшие галушки, которые я когда-либо пробовала!
+                            Настоящий домашний вкус. Спасибо, MerzCham!"
+                        </p>
+                        <h4>- Хеда И.</h4>
+                    </div>
+                    <div class="review-item">
+                        <p>
+                            "Пельмени просто тают во рту! Доставка быстрая, все
+                            приехало горячим. Обязательно закажу еще."
+                        </p>
+                        <h4>- Седа А.</h4>
+                    </div>
+                    <div class="review-item">
+                        <p>
+                            "Заказывали комбо - очень сытно и вкусно! Цена
+                            приятная. Рекомендую."
+                        </p>
+                        <h4>- Иман Б.</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Контакты" -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Свяжитесь с Нами</h2>
+                <div class="contact-content">
+                    <div class="contact-details">
+                        <h3>MerzCham</h3>
+                        <p>
+                            <strong>Адрес:</strong> ул. Вкусная, дом 1, Город
+                            Мечты
+                        </p>
+                        <p>
+                            <strong>Телефон:</strong>
+                            <a href="tel:+79991234567">+7 (968) 222-66-00</a>
+                        </p>
+                        <p>
+                            <strong>Email:</strong>
+                            <a href="mailto:info@merzcham.com"
+                                >info@merzcham.com</a
+                            >
+                        </p>
+                        <p>
+                            <strong>Часы работы:</strong> Пн-Вс: 10:00 - 22:00
+                        </p>
+                        <div class="social-links">
+                            <!-- <a href="#" target="_blank" aria-label="ВКонтакте"
+                                ><img src="images/vk-icon.svg" alt="VK"
+                            /></a> --><a
+                                href="#"
+                                target="_blank"
+                                aria-label="Ватсапп"
+                                ><img src="icons/whatsapp.png" alt="Telegram"
+                            /></a>
+                            <a href="#" target="_blank" aria-label="Телеграм"
+                                ><img src="icons/telegram.png" alt="Telegram"
+                            /></a>
+                        </div>
+                    </div>
+                    <div class="contact-map">
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A0e71347967f1e53386f61d596003a30c3d62f79e0aa4732ea2d99550b87c49ba&source=constructor"
+                            width="100%"
+                            height="400"
+                            frameborder="0"
+                        ></iframe>
+                        <p>
+                            <small
+                                >Это пример карты. Вам нужно будет создать свою
+                                карту на Яндекс.Картах и вставить сюда ее
+                                код.</small
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Футер (Подвал) -->
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    © <span id="currentYear"></span> MerzCham. Все права
+                    защищены.
+                </p>
+                <p>
+                    <a href="#privacy-policy">Политика конфиденциальности</a> |
+                    <a href="#terms">Условия использования</a>
+                </p>
+                <!-- Добавьте сюда ссылки на реальные документы, если они есть -->
+            </div>
+        </footer>
+
+        <div id="toast-container"></div>
+        <!-- Контейнер для уведомлений -->
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
