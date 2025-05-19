@@ -1,0 +1,20 @@
+/* css/main.css */
+
+@import url("_base/base_styles.css");
+@import url("_base/animations.css");
+
+@import url("_components/buttons.css");
+@import url("_components/navbar.css");
+@import url("_components/toasts.css");
+
+@import url("_layout/sections_general.css");
+@import url("_layout/footer.css");
+
+@import url("_sections/hero.css");
+@import url("_sections/about.css");
+@import url("_sections/menu.css");
+@import url("_sections/delivery.css");
+@import url("_sections/reviews.css");
+@import url("_sections/contact.css");
+
+@import url("_responsive/responsive.css");

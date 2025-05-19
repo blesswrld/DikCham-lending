@@ -1,0 +1,64 @@
+/* Delivery Section */
+.delivery-info {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.delivery-text {
+    opacity: 0;
+    flex: 1.2;
+}
+.delivery-text ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+.delivery-text li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+.delivery-text li::before {
+    content: "✔";
+    color: var(--brand-primary-accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+.delivery-text h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: var(--brand-headings);
+}
+.payment-methods {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+.payment-methods li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+.payment-methods img {
+    width: 36px;
+    height: auto;
+    margin-right: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 3px;
+    background-color: #fff;
+}
+.delivery-image {
+    opacity: 0;
+    flex: 0.8;
+    text-align: center;
+}
+.delivery-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}

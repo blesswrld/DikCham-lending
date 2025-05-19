@@ -1,0 +1,170 @@
+/* Navbar */
+.navbar {
+    background-color: var(--bg-navbar);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(
+        251,
+        249,
+        246,
+        0.97
+    ); /* Slightly transparent version of --bg-main */
+    padding: 0.75rem 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    /* This style applies if the <img> fails or for text logos */
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--brand-headings);
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: var(--text-on-light-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--brand-primary-accent);
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--brand-primary-accent);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.nav-links .dropbtn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-links .dropbtn .arrow-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-left: 6px;
+    font-size: 0.8em;
+}
+
+.dropdown:hover .dropbtn .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-navbar);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px 0;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: opacity 0.25s ease-out, visibility 0.25s ease-out,
+        transform 0.25s ease-out;
+}
+
+.dropdown-content a {
+    color: var(--text-on-light-secondary);
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+.dropdown-content a::after {
+    display: none;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-alt-section);
+    color: var(--brand-primary-accent);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.navbar-contact-info {
+    font-size: 0.85rem;
+    text-align: right;
+    color: #777; /* Keeping this neutral grey for secondary info */
+}
+.navbar-contact-info p {
+    margin: 1px 0;
+}
+
+.burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+.burger-menu span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--text-on-light-primary);
+    margin: 6px 0;
+    border-radius: 3px;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}

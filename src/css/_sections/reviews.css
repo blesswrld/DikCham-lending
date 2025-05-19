@@ -1,0 +1,38 @@
+/* Reviews Section */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+.review-item {
+    opacity: 0;
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    border-left: 6px solid var(--brand-primary-accent);
+    position: relative;
+}
+.review-item::before {
+    content: "“";
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 3.5rem;
+    color: var(--brand-primary-accent);
+    opacity: 0.2;
+    line-height: 1;
+}
+.review-item p {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: var(--text-on-light-secondary);
+    position: relative;
+    z-index: 1;
+    padding-top: 10px;
+}
+.review-item h4 {
+    text-align: right;
+    color: var(--text-on-light-primary);
+    font-weight: bold;
+}
