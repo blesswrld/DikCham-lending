@@ -1,7 +1,7 @@
 /* css/_layout/sections_general.css */
 
 section {
-    padding: 80px 0;
+    padding: 70px 0; /* Adjusted padding */
 }
 section:nth-child(even) {
     background-color: var(--color-background-alt);
@@ -9,19 +9,20 @@ section:nth-child(even) {
 
 h2 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    color: var(--color-heading);
+    font-size: 2.2rem; /* Adjusted size */
+    margin-bottom: 45px; /* Adjusted margin */
+    color: var(--color-text-dark);
     font-weight: 700;
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 12px; /* Adjusted padding */
+    letter-spacing: 0.5px;
 }
 h2::after {
     content: "";
     position: absolute;
-    width: 70px;
+    width: 60px; /* Adjusted width */
     height: 3px;
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-accent);
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);

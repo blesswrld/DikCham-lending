@@ -17,17 +17,17 @@
     }
     .delivery-image,
     .contact-map {
-        margin-top: 30px;
-        width: 100%; /* Обеспечиваем, чтобы карта/изображение занимали всю ширину */
+        margin-top: 25px; /* Adjusted margin */
+        width: 100%;
     }
     .hero-section h1 {
-        font-size: 2.8rem;
+        font-size: 2.5rem; /* Adjusted size */
     }
     h2 {
-        font-size: 2.1rem;
+        font-size: 1.9rem; /* Adjusted size */
     }
     .menu-grid {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
 
@@ -36,46 +36,56 @@
         font-size: 15px;
     }
 
+    .navbar {
+        padding: 0.5rem 0; /* Reduced padding for smaller navbar */
+    }
+    .navbar.scrolled {
+        padding: 0.4rem 0;
+    }
+    .logo {
+        max-width: 50px; /* Smaller logo */
+    }
+    .navbar-content {
+        /* Add padding to prevent elements from touching edges */
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     .burger-menu {
         display: block;
     }
     .burger-menu.active span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
+        transform: translateY(6px) rotate(45deg); /* Adjusted transform */
     }
     .burger-menu.active span:nth-child(2) {
         opacity: 0;
     }
     .burger-menu.active span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
+        transform: translateY(-6px) rotate(-45deg); /* Adjusted transform */
     }
 
     .nav-links {
-        display: none; /* Скрыто по умолчанию */
+        display: none;
         position: absolute;
-        top: calc(100% - 1px); /* Позиционируем сразу под шапкой */
+        top: 100%; /* Position right below the navbar */
         left: 0;
         width: 100%;
         background-color: var(--color-navbar-bg);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
-        border-top: 1px solid var(--color-border);
+        box-shadow: 0 4px 8px var(--color-shadow);
+        border-top: 1px solid var(--color-navbar-border-bottom);
         flex-direction: column;
         align-items: stretch;
         padding: 0;
     }
 
-    .navbar.scrolled .nav-links {
-        /* Для случая, когда шапка "прилипла" */
-        top: calc(100% - 1px);
-    }
-
     .nav-links.active {
-        display: flex; /* Показываем при активном бургере */
+        display: flex;
     }
 
     .nav-links li {
         margin-left: 0;
         width: 100%;
-        border-bottom: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-navbar-border-bottom);
     }
     .nav-links li:last-child {
         border-bottom: none;
@@ -84,20 +94,18 @@
     .nav-links a {
         width: 100%;
         display: block;
-        padding: 14px 20px;
+        padding: 12px 20px; /* Adjusted padding */
         text-align: left;
-        font-size: 1rem; /* Немного увеличил для мобильных */
+        font-size: 0.95rem;
     }
 
     .nav-links a::after {
-        /* Убираем нижнюю черту для мобильного меню */
         display: none;
     }
     .nav-links a.active,
     .nav-links a:hover {
-        /* Выделение активного пункта */
         background-color: var(--color-background-alt);
-        color: var(--color-primary);
+        color: var(--color-navbar-link-hover);
     }
 
     .dropdown .dropbtn {
@@ -105,83 +113,102 @@
         width: 100%;
     }
     .nav-links .dropbtn .arrow-icon {
-        margin-right: 0; /* Убрал лишний отступ для стрелки */
+        margin-right: 0; /* Removed margin for mobile */
     }
 
     .dropdown-content {
-        position: static; /* В мобильном меню делаем статичным */
+        position: static;
         box-shadow: none;
-        border-top: 1px solid var(--color-border);
-        background-color: var(
-            --color-background-alt
-        ); /* Немного другой фон для вложенного меню */
+        border-top: 1px solid var(--color-navbar-border-bottom);
+        background-color: var(--color-background-alt);
         width: 100%;
         border-radius: 0;
         transform: none;
         opacity: 1;
         visibility: visible;
-        display: none; /* Скрыто по умолчанию */
+        display: none;
         padding: 0;
     }
-    /* Для показа/скрытия dropdown-content теперь нужен JS */
-    /* Например, при клике на .dropbtn добавлять класс 'open' на .dropdown */
     .dropdown.open .dropdown-content {
+        /* JS should add 'open' class to .dropdown */
         display: block;
     }
 
     .dropdown-content a {
-        padding: 12px 20px 12px 30px; /* Добавил отступ слева для вложенности */
+        padding: 10px 20px 10px 30px; /* Indent sub-items */
         font-size: 0.9rem;
-        border-bottom: 1px solid var(--color-border); /* Разделитель между пунктами */
+        border-bottom: 1px solid var(--color-navbar-border-bottom);
     }
     .dropdown-content a:last-child {
         border-bottom: none;
     }
 
     .hero-section {
-        padding-top: 100px; /* Уменьшил отступ для мобильных */
-        min-height: 70vh;
+        padding-top: 80px;
+        min-height: 65vh;
     }
     .hero-section h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     .hero-section p {
-        font-size: 1.05rem;
+        font-size: 1rem;
     }
     h2 {
-        font-size: 1.8rem;
-        margin-bottom: 35px;
+        font-size: 1.7rem;
+        margin-bottom: 30px;
     }
     h2::after {
         width: 50px;
     }
     section {
-        padding: 60px 0;
+        padding: 50px 0;
     }
     .btn {
-        padding: 10px 22px;
-        font-size: 0.9rem;
+        padding: 9px 20px;
+        font-size: 0.85rem;
     }
     .menu-grid {
-        grid-template-columns: 1fr; /* Одна колонка для меню на мобильных */
+        grid-template-columns: 1fr;
     }
     .menu-item img {
-        height: 220px; /* Можно настроить высоту изображений в меню для мобильных */
+        height: 200px;
     }
     .reviews-grid {
-        grid-template-columns: 1fr; /* Одна колонка для отзывов */
+        grid-template-columns: 1fr;
     }
     #toast-container {
-        right: 15px;
-        bottom: 15px;
-        width: calc(100% - 30px);
+        right: 10px;
+        bottom: 10px;
+        width: calc(100% - 20px);
     }
     .toast {
         min-width: 0;
         width: 100%;
-        padding: 12px 20px;
+        padding: 10px 18px;
     }
     .footer {
-        padding: 40px 0 20px;
+        padding: 30px 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small screens */
+    .navbar {
+        padding: 0.4rem 0;
+    }
+    .navbar.scrolled {
+        padding: 0.3rem 0;
+    }
+    .logo {
+        max-width: 40px; /* Even smaller logo */
+    }
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+    h2 {
+        font-size: 1.5rem;
     }
 }
