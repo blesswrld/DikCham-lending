@@ -29,12 +29,8 @@
 }
 
 .logo {
-    /* This style applies if the <img> fails or for text logos */
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--brand-headings);
-    text-decoration: none;
-    letter-spacing: -1px;
+    width: 76px;
+    width: 76px;
 }
 
 .nav-links {

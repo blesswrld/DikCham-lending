@@ -26,9 +26,7 @@
 }
 .toast.error {
     background-color: var(--error-color);
-    color: var(
-        --text-on-dark
-    ); /* Assuming error text should be light on dark red */
+    color: var(--text-on-dark);
 }
 .toast.info {
     background-color: var(--info-color-bg);

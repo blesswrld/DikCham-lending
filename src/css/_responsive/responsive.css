@@ -3,6 +3,10 @@
     .navbar-contact-info {
         display: none;
     }
+    .logo {
+        width: 72px;
+        height: 72px;
+    }
     .about-features,
     .delivery-info,
     .contact-content {
@@ -16,7 +20,6 @@
         font-size: 3rem;
     }
     h2 {
-        /* Overriding general h2 for this breakpoint */
         font-size: 2.2rem;
     }
 }
@@ -51,6 +54,11 @@
         flex-direction: column;
         align-items: stretch;
         padding: 0;
+    }
+
+    .logo {
+        width: 62px;
+        height: 62px;
     }
 
     .navbar.scrolled .nav-links {
@@ -97,9 +105,7 @@
         position: static;
         box-shadow: none;
         border-top: 1px solid #e0e0e0;
-        background-color: var(
-            --bg-alt-section
-        ); /* Slightly different for mobile dropdown */
+        background-color: var(--bg-alt-section);
         width: 100%;
         border-radius: 0;
         transform: none;
@@ -109,14 +115,13 @@
         padding: 0;
     }
     .dropdown:hover .dropdown-content {
-        /* Consider JS click for mobile */
         display: block;
     }
 
     .dropdown-content a {
         padding: 12px 20px 12px 35px;
         font-size: 0.9rem;
-        border-bottom: 1px solid #eee; /* Lighter than li border */
+        border-bottom: 1px solid #eee;
     }
     .dropdown-content a:last-child {
         border-bottom: none;
@@ -129,20 +134,16 @@
         font-size: 1.1rem;
     }
     h2 {
-        /* Overriding general h2 for this breakpoint */
         font-size: 1.8rem;
         margin-bottom: 40px;
     }
     h2::after {
-        /* Overriding general h2::after for this breakpoint */
         width: 60px;
     }
     section {
-        /* Overriding general section padding for this breakpoint */
         padding: 60px 0;
     }
     .btn {
-        /* Overriding general .btn for this breakpoint */
         padding: 12px 25px;
         font-size: 0.9rem;
     }

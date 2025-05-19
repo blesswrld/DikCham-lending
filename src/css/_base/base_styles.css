@@ -6,33 +6,33 @@
 }
 
 :root {
-    --color-dark-green: #4a5c32; /* Outer border of logo */
-    --color-olive-green: #6b8258; /* Inner border, laurels - Main Accent */
-    --color-tan: #c89f70; /* Hand, platform - Secondary Accent */
-    --color-dark-brown: #5d4037; /* "DIK CHAM" text - Headings, Logo Text */
-    --color-dumpling-dark: #2a2a2a; /* Dumpling body - Dark elements */
+    --color-dark-green: #4a5c32;
+    --color-olive-green: #6b8258;
+    --color-tan: #c89f70;
+    --color-dark-brown: #5d4037;
+    --color-dumpling-dark: #2a2a2a;
 
-    --text-on-dark: #f5efe6; /* Light beige for text on dark backgrounds */
-    --text-on-light-primary: #3e2723; /* Very dark brown for main body text */
-    --text-on-light-secondary: #604c42; /* Medium dark brown for secondary text */
+    --text-on-dark: #f5efe6;
+    --text-on-light-primary: #3e2723;
+    --text-on-light-secondary: #604c42;
 
-    --bg-main: #fbf9f6; /* Main page background - very light warm off-white */
-    --bg-alt-section: #f4f0e9; /* Alternate section background - slightly darker warm off-white */
-    --bg-card: #ffffff; /* Card backgrounds - white for pop */
-    --bg-navbar: #ffffff; /* Navbar background */
+    --bg-main: #fbf9f6;
+    --bg-alt-section: #f4f0e9;
+    --bg-card: #ffffff;
+    --bg-navbar: #ffffff;
 
     --brand-primary-accent: var(--color-olive-green);
     --brand-secondary-accent: var(--color-tan);
     --brand-headings: var(--color-dark-brown);
 
-    --action-primary-hover: #7d9a6b; /* Lighter olive for hover */
-    --action-secondary-hover: #b08a5d; /* Darker tan for hover */
+    --action-primary-hover: #7d9a6b;
+    --action-secondary-hover: #b08a5d;
 
     --footer-bg: var(--color-dark-green);
     --footer-text: var(--text-on-dark);
     --footer-link: var(--color-tan);
 
-    --error-color: #c0392b; /* Muted red for errors */
+    --error-color: #c0392b;
     --info-color-bg: var(--color-tan);
     --info-color-text: var(--text-on-light-primary);
     --success-color-bg: var(--color-olive-green);

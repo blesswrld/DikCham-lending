@@ -1,6 +1,6 @@
 /* About Section */
 #about {
-    background-color: var(--bg-main); /* Ensured for odd sections */
+    background-color: var(--bg-main);
 }
 
 .about-section > .container > p {
@@ -35,9 +35,7 @@
     height: 60px;
     object-fit: contain;
     margin-bottom: 20px;
-    color: var(
-        --brand-primary-accent
-    ); /* For SVG icons if they use currentColor */
+    color: var(--brand-primary-accent);
 }
 .feature-item h3 {
     margin-bottom: 10px;

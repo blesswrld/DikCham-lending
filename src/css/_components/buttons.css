@@ -22,7 +22,7 @@
 .btn-primary:hover {
     background-color: var(--action-primary-hover);
     transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(107, 130, 88, 0.4); /* Shadow color based on olive green */
+    box-shadow: 0 4px 15px rgba(107, 130, 88, 0.4);
 }
 
 .btn-secondary {
@@ -33,5 +33,5 @@
 .btn-secondary:hover {
     background-color: var(--action-secondary-hover);
     transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(200, 159, 112, 0.4); /* Shadow color based on tan */
+    box-shadow: 0 4px 15px rgba(200, 159, 112, 0.4);
 }
