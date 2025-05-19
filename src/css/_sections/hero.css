@@ -1,13 +1,14 @@
-/* Hero Section */
+/* css/_sections/hero.css */
+
 .hero-section {
     background: url("../images/hero-bg.jpg") no-repeat center center/cover;
-    color: var(--text-on-dark);
+    color: var(--color-text-on-dark);
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 150px;
-    min-height: 100vh;
+    padding-top: 120px;
+    min-height: 90vh;
     position: relative;
 }
 .hero-section::before {
@@ -17,12 +18,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(
-        42,
-        42,
-        42,
-        0.65
-    ); /* var(--color-dumpling-dark) with opacity */
+    background-color: rgba(30, 30, 30, 0.6);
 }
 .hero-section .container {
     position: relative;
@@ -30,19 +26,23 @@
 }
 
 .hero-section h1 {
-    font-size: 4rem;
-    margin-bottom: 25px;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    animation: fadeInDown 1s ease-out;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    animation: fadeInDown 0.8s ease-out;
 }
 
 .hero-section p {
-    font-size: 1.3rem;
-    margin-bottom: 40px;
-    max-width: 700px;
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
-    animation: fadeInUp 1s ease-out 0.5s;
+    animation: fadeInUp 0.8s ease-out 0.3s;
+    animation-fill-mode: backwards;
+}
+.hero-section .btn-primary {
+    animation: zoomIn 0.8s ease-out 0.6s;
     animation-fill-mode: backwards;
 }

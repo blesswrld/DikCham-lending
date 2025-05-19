@@ -1,8 +1,9 @@
-/* Toast Notifications */
+/* css/_components/toasts.css */
+
 #toast-container {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 25px;
+    right: 25px;
     z-index: 2000;
     display: flex;
     flex-direction: column-reverse;
@@ -10,29 +11,27 @@
 }
 
 .toast {
-    background-color: var(--success-color-bg);
-    color: var(--success-color-text);
-    padding: 16px 28px;
-    border-radius: 8px;
-    margin-top: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    background-color: var(--color-success);
+    color: var(--toast-text-light);
+    padding: 15px 25px;
+    border-radius: 6px;
+    margin-top: 10px;
+    box-shadow: 0 5px 15px var(--color-shadow);
     opacity: 0;
-    transform: translateX(110%);
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    font-size: 1rem;
+    transform: translateX(100%);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    font-size: 0.95rem;
     display: flex;
     align-items: center;
-    min-width: 280px;
+    min-width: 250px;
 }
 .toast.error {
-    background-color: var(--error-color);
-    color: var(
-        --text-on-dark
-    ); /* Assuming error text should be light on dark red */
+    background-color: var(--color-error);
+    color: var(--toast-text-light);
 }
 .toast.info {
-    background-color: var(--info-color-bg);
-    color: var(--info-color-text);
+    background-color: var(--color-info-bg);
+    color: var(--color-info-text);
 }
 
 .toast.show {
@@ -41,7 +40,7 @@
 }
 
 .toast-icon {
-    margin-right: 12px;
-    font-size: 1.3rem;
+    margin-right: 10px;
+    font-size: 1.2rem;
     line-height: 1;
 }

@@ -1,4 +1,5 @@
-/* Базовые стили и сброс */
+/* css/_base/base_styles.css */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,37 +7,30 @@
 }
 
 :root {
-    --color-dark-green: #4a5c32; /* Outer border of logo */
-    --color-olive-green: #6b8258; /* Inner border, laurels - Main Accent */
-    --color-tan: #c89f70; /* Hand, platform - Secondary Accent */
-    --color-dark-brown: #5d4037; /* "DIK CHAM" text - Headings, Logo Text */
-    --color-dumpling-dark: #2a2a2a; /* Dumpling body - Dark elements */
-
-    --text-on-dark: #f5efe6; /* Light beige for text on dark backgrounds */
-    --text-on-light-primary: #3e2723; /* Very dark brown for main body text */
-    --text-on-light-secondary: #604c42; /* Medium dark brown for secondary text */
-
-    --bg-main: #fbf9f6; /* Main page background - very light warm off-white */
-    --bg-alt-section: #f4f0e9; /* Alternate section background - slightly darker warm off-white */
-    --bg-card: #ffffff; /* Card backgrounds - white for pop */
-    --bg-navbar: #ffffff; /* Navbar background */
-
-    --brand-primary-accent: var(--color-olive-green);
-    --brand-secondary-accent: var(--color-tan);
-    --brand-headings: var(--color-dark-brown);
-
-    --action-primary-hover: #7d9a6b; /* Lighter olive for hover */
-    --action-secondary-hover: #b08a5d; /* Darker tan for hover */
-
-    --footer-bg: var(--color-dark-green);
-    --footer-text: var(--text-on-dark);
-    --footer-link: var(--color-tan);
-
-    --error-color: #c0392b; /* Muted red for errors */
-    --info-color-bg: var(--color-tan);
-    --info-color-text: var(--text-on-light-primary);
-    --success-color-bg: var(--color-olive-green);
-    --success-color-text: var(--text-on-dark);
+    --color-primary: #5d7c6f;
+    --color-primary-hover: #4a6357;
+    --color-secondary: #e0a867;
+    --color-secondary-hover: #c99151;
+    --color-heading: #333a40;
+    --color-text: #2f353a;
+    --color-text-muted: #6a737c;
+    --color-background: #ffffff;
+    --color-background-alt: #f8f9fa;
+    --color-card-bg: #ffffff;
+    --color-border: #e0e3e6;
+    --color-shadow: rgba(0, 0, 0, 0.08);
+    --color-shadow-hover: rgba(0, 0, 0, 0.12);
+    --color-navbar-bg: #ffffff;
+    --color-navbar-bg-scrolled: rgba(255, 255, 255, 0.97);
+    --color-text-on-dark: #ffffff;
+    --color-footer-bg: #2a2f33;
+    --color-footer-text: #d1d5d8;
+    --color-footer-link: var(--color-secondary);
+    --color-error: #d9534f;
+    --color-success: #5cb85c;
+    --color-info-bg: var(--color-secondary);
+    --color-info-text: var(--color-text-on-dark);
+    --toast-text-light: #ffffff;
 }
 
 html {
@@ -45,15 +39,17 @@ html {
 
 body {
     font-family: "Roboto", "Arial", sans-serif;
-    line-height: 1.7;
-    color: var(--text-on-light-primary);
-    background-color: var(--bg-main);
+    line-height: 1.65;
+    color: var(--color-text);
+    background-color: var(--color-background);
     font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
     width: 90%;
-    max-width: 1170px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }

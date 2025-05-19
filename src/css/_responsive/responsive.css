@@ -1,9 +1,16 @@
-/* Адаптивность */
+/* css/_responsive/responsive.css */
+
 @media (max-width: 992px) {
     .navbar-contact-info {
         display: none;
     }
-    .about-features,
+    .about-features {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .feature-item {
+        flex-basis: auto;
+    }
     .delivery-info,
     .contact-content {
         flex-direction: column;
@@ -11,13 +18,16 @@
     .delivery-image,
     .contact-map {
         margin-top: 30px;
+        width: 100%; /* Обеспечиваем, чтобы карта/изображение занимали всю ширину */
     }
     .hero-section h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
     h2 {
-        /* Overriding general h2 for this breakpoint */
-        font-size: 2.2rem;
+        font-size: 2.1rem;
+    }
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 }
 
@@ -30,41 +40,42 @@
         display: block;
     }
     .burger-menu.active span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
+        transform: translateY(7px) rotate(45deg);
     }
     .burger-menu.active span:nth-child(2) {
         opacity: 0;
     }
     .burger-menu.active span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
+        transform: translateY(-7px) rotate(-45deg);
     }
 
     .nav-links {
-        display: none;
+        display: none; /* Скрыто по умолчанию */
         position: absolute;
-        top: 100%;
+        top: calc(100% - 1px); /* Позиционируем сразу под шапкой */
         left: 0;
         width: 100%;
-        background-color: var(--bg-navbar);
-        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-        border-top: 1px solid #eee;
+        background-color: var(--color-navbar-bg);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+        border-top: 1px solid var(--color-border);
         flex-direction: column;
         align-items: stretch;
         padding: 0;
     }
 
     .navbar.scrolled .nav-links {
-        top: 100%;
+        /* Для случая, когда шапка "прилипла" */
+        top: calc(100% - 1px);
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex; /* Показываем при активном бургере */
     }
 
     .nav-links li {
         margin-left: 0;
         width: 100%;
-        border-bottom: 1px solid var(--bg-alt-section);
+        border-bottom: 1px solid var(--color-border);
     }
     .nav-links li:last-child {
         border-bottom: none;
@@ -73,16 +84,20 @@
     .nav-links a {
         width: 100%;
         display: block;
-        padding: 15px 20px;
+        padding: 14px 20px;
         text-align: left;
+        font-size: 1rem; /* Немного увеличил для мобильных */
     }
 
     .nav-links a::after {
-        left: 0;
-        transform: none;
+        /* Убираем нижнюю черту для мобильного меню */
+        display: none;
     }
-    .nav-links a.active::after {
-        width: 100%;
+    .nav-links a.active,
+    .nav-links a:hover {
+        /* Выделение активного пункта */
+        background-color: var(--color-background-alt);
+        color: var(--color-primary);
     }
 
     .dropdown .dropbtn {
@@ -90,72 +105,83 @@
         width: 100%;
     }
     .nav-links .dropbtn .arrow-icon {
-        margin-right: 20px;
+        margin-right: 0; /* Убрал лишний отступ для стрелки */
     }
 
     .dropdown-content {
-        position: static;
+        position: static; /* В мобильном меню делаем статичным */
         box-shadow: none;
-        border-top: 1px solid #e0e0e0;
+        border-top: 1px solid var(--color-border);
         background-color: var(
-            --bg-alt-section
-        ); /* Slightly different for mobile dropdown */
+            --color-background-alt
+        ); /* Немного другой фон для вложенного меню */
         width: 100%;
         border-radius: 0;
         transform: none;
         opacity: 1;
         visibility: visible;
-        display: none;
+        display: none; /* Скрыто по умолчанию */
         padding: 0;
     }
-    .dropdown:hover .dropdown-content {
-        /* Consider JS click for mobile */
+    /* Для показа/скрытия dropdown-content теперь нужен JS */
+    /* Например, при клике на .dropbtn добавлять класс 'open' на .dropdown */
+    .dropdown.open .dropdown-content {
         display: block;
     }
 
     .dropdown-content a {
-        padding: 12px 20px 12px 35px;
+        padding: 12px 20px 12px 30px; /* Добавил отступ слева для вложенности */
         font-size: 0.9rem;
-        border-bottom: 1px solid #eee; /* Lighter than li border */
+        border-bottom: 1px solid var(--color-border); /* Разделитель между пунктами */
     }
     .dropdown-content a:last-child {
         border-bottom: none;
     }
 
+    .hero-section {
+        padding-top: 100px; /* Уменьшил отступ для мобильных */
+        min-height: 70vh;
+    }
     .hero-section h1 {
         font-size: 2.2rem;
     }
     .hero-section p {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
     }
     h2 {
-        /* Overriding general h2 for this breakpoint */
         font-size: 1.8rem;
-        margin-bottom: 40px;
+        margin-bottom: 35px;
     }
     h2::after {
-        /* Overriding general h2::after for this breakpoint */
-        width: 60px;
+        width: 50px;
     }
     section {
-        /* Overriding general section padding for this breakpoint */
         padding: 60px 0;
     }
     .btn {
-        /* Overriding general .btn for this breakpoint */
-        padding: 12px 25px;
+        padding: 10px 22px;
         font-size: 0.9rem;
     }
     .menu-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Одна колонка для меню на мобильных */
+    }
+    .menu-item img {
+        height: 220px; /* Можно настроить высоту изображений в меню для мобильных */
+    }
+    .reviews-grid {
+        grid-template-columns: 1fr; /* Одна колонка для отзывов */
     }
     #toast-container {
-        right: 10px;
-        bottom: 10px;
-        width: calc(100% - 20px);
+        right: 15px;
+        bottom: 15px;
+        width: calc(100% - 30px);
     }
     .toast {
         min-width: 0;
         width: 100%;
+        padding: 12px 20px;
+    }
+    .footer {
+        padding: 40px 0 20px;
     }
 }

@@ -1,24 +1,25 @@
-/* Contact Section */
+/* css/_sections/contact.css */
+
 .contact-content {
     display: flex;
-    gap: 50px;
+    gap: 40px;
 }
 .contact-details {
     opacity: 0;
     flex: 1;
 }
 .contact-details h3 {
-    font-size: 1.8rem;
-    margin-bottom: 25px;
-    color: var(--brand-headings);
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: var(--color-heading);
 }
 .contact-details p {
-    margin-bottom: 12px;
-    color: var(--text-on-light-secondary);
-    font-size: 1.05rem;
+    margin-bottom: 10px;
+    color: var(--color-text-muted);
+    font-size: 1rem;
 }
 .contact-details a {
-    color: var(--brand-primary-accent);
+    color: var(--color-primary);
     text-decoration: none;
     font-weight: 500;
 }
@@ -26,17 +27,17 @@
     text-decoration: underline;
 }
 .social-links {
-    margin-top: 25px;
+    margin-top: 20px;
 }
 .social-links a {
-    margin-right: 18px;
+    margin-right: 15px;
     display: inline-block;
 }
 .social-links img {
-    width: 35px;
-    height: 35px;
-    opacity: 0.8;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    width: 32px;
+    height: 32px;
+    opacity: 0.75;
+    transition: opacity 0.25s ease, transform 0.25s ease;
 }
 .social-links img:hover {
     opacity: 1;
@@ -45,10 +46,18 @@
 .contact-map {
     opacity: 0;
     flex: 1.2;
-    min-height: 350px;
+    min-height: 320px; /* Уменьшено для более компактного вида */
 }
 .contact-map iframe {
-    border-radius: 10px;
+    border-radius: 8px;
     border: 0;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px var(--color-shadow);
+    width: 100%;
+    height: 100%; /* Чтобы iframe занял всю высоту родителя .contact-map */
+}
+.contact-map p small {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    display: block;
+    margin-top: 8px;
 }

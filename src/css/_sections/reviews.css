@@ -1,38 +1,41 @@
-/* Reviews Section */
+/* css/_sections/reviews.css */
+
 .reviews-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 .review-item {
     opacity: 0;
-    background-color: var(--bg-card);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
-    border-left: 6px solid var(--brand-primary-accent);
+    background-color: var(--color-card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--color-shadow);
+    border-left: 5px solid var(--color-primary);
     position: relative;
 }
 .review-item::before {
     content: "“";
     position: absolute;
-    top: 15px;
-    left: 20px;
-    font-size: 3.5rem;
-    color: var(--brand-primary-accent);
-    opacity: 0.2;
+    top: 10px;
+    left: 15px;
+    font-size: 3rem;
+    color: var(--color-primary);
+    opacity: 0.15;
     line-height: 1;
 }
 .review-item p {
     font-style: italic;
-    margin-bottom: 20px;
-    color: var(--text-on-light-secondary);
+    margin-bottom: 18px;
+    color: var(--color-text-muted);
     position: relative;
     z-index: 1;
-    padding-top: 10px;
+    padding-top: 8px;
+    font-size: 0.95rem;
 }
 .review-item h4 {
     text-align: right;
-    color: var(--text-on-light-primary);
-    font-weight: bold;
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: 1rem;
 }
