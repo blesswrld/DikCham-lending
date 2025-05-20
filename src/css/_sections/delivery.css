@@ -1,12 +1,18 @@
-/* Delivery Section */
 .delivery-info {
     display: flex;
     gap: 50px;
     align-items: center;
+    flex-wrap: wrap;
 }
 .delivery-text {
     opacity: 0;
     flex: 1.2;
+    min-width: 300px;
+}
+.delivery-text > p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: var(--text-on-light-primary);
 }
 .delivery-text ul {
     list-style: none;
@@ -17,6 +23,8 @@
     margin-bottom: 10px;
     padding-left: 25px;
     position: relative;
+    color: var(--text-on-light-secondary);
+    font-size: 1rem;
 }
 .delivery-text li::before {
     content: "✔";
@@ -24,6 +32,7 @@
     position: absolute;
     left: 0;
     font-weight: bold;
+    top: 0;
 }
 .delivery-text h3 {
     margin-top: 25px;
@@ -35,30 +44,53 @@
     list-style: none;
     padding-left: 0;
     margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 25px;
 }
 .payment-methods li {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
-    font-size: 1rem;
+    margin-bottom: 0;
+    padding-left: 0;
+    position: static;
+    min-width: 150px;
+}
+.payment-methods li::before {
+    content: none;
 }
 .payment-methods img {
     width: 36px;
     height: auto;
     margin-right: 12px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color, #ddd);
     border-radius: 4px;
     padding: 3px;
-    background-color: #fff;
+    background-color: var(--bg-card);
+    object-fit: contain;
 }
 .delivery-image {
-    opacity: 0;
+    opacity: 0; /* Для анимации появления через JS */
     flex: 0.8;
     text-align: center;
+    min-width: 300px;
 }
 .delivery-image img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+}
+.delivery-text a[href^="tel:"] {
+    /* Ссылка на телефон */
+    color: var(--brand-primary-accent);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+.delivery-text a[href^="tel:"]:hover {
+    text-decoration: underline;
+    color: var(--action-primary-hover);
 }

@@ -1,11 +1,12 @@
-/* Contact Section */
 .contact-content {
     display: flex;
     gap: 50px;
+    flex-wrap: wrap; /
 }
 .contact-details {
-    opacity: 0;
+    opacity: 0; /* Для анимации появления через JS */
     flex: 1;
+    min-width: 300px;
 }
 .contact-details h3 {
     font-size: 1.8rem;
@@ -21,9 +22,11 @@
     color: var(--brand-primary-accent);
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 .contact-details a:hover {
     text-decoration: underline;
+    color: var(--action-primary-hover);
 }
 .social-links {
     margin-top: 25px;
@@ -37,6 +40,7 @@
     height: 35px;
     opacity: 0.8;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    will-change: opacity, transform; /* Подсказка для браузера */
 }
 .social-links img:hover {
     opacity: 1;
@@ -46,9 +50,18 @@
     opacity: 0;
     flex: 1.2;
     min-height: 350px;
+    min-width: 300px;
 }
 .contact-map iframe {
     border-radius: 10px;
     border: 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.contact-map p {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 10px;
 }

@@ -1,17 +1,22 @@
-/* Reviews Section */
+/* css/_sections/reviews.css */
 .reviews-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+    ); /* Чуть уменьшим minmax */
     gap: 35px;
 }
 .review-item {
-    opacity: 0;
+    opacity: 0; /* Для анимации появления через JS */
     background-color: var(--bg-card);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
     border-left: 6px solid var(--brand-primary-accent);
     position: relative;
+    /* Убедимся, что transition для появления управляется JS */
+    /* transition: opacity 0.5s ease-out, transform 0.5s ease-out; */
 }
 .review-item::before {
     content: "“";
@@ -22,6 +27,7 @@
     color: var(--brand-primary-accent);
     opacity: 0.2;
     line-height: 1;
+    pointer-events: none; /* Убедимся, что не блокирует взаимодействие */
 }
 .review-item p {
     font-style: italic;
@@ -29,10 +35,11 @@
     color: var(--text-on-light-secondary);
     position: relative;
     z-index: 1;
-    padding-top: 10px;
+    padding-top: 10px; /* Чтобы текст не перекрывался псевдоэлементом */
 }
 .review-item h4 {
     text-align: right;
     color: var(--text-on-light-primary);
     font-weight: bold;
+    margin-top: 15px; /* Добавляем отступ сверху */
 }

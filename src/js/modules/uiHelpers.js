@@ -1,5 +1,3 @@
-// js/modules/uiHelpers.js
-
 /**
  * Creates and shows a toast notification.
  * @param {string} message - The message to display in the toast.

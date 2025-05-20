@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Комбо "Обед Чемпиона" - DikCham</title>
+        <link rel="stylesheet" href="../css/main.css" />
+        <!-- Добавьте сюда favicon, если есть: <link rel="icon" href="../images/favicon.ico"> -->
+    </head>
+    <body>
+        <!-- Navbar (Шапка сайта) -->
+        <nav class="navbar">
+            <div class="container navbar-content">
+                <a href="../index.html#hero">
+                    <img
+                        src="../images/logo/logo.png"
+                        class="logo"
+                        alt="DikCham logo"
+                    />
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../index.html#about">О Нас</a></li>
+                    <li class="dropdown">
+                        <a href="../index.html#menu" class="dropbtn"
+                            >Меню <span class="arrow-icon">▼</span></a
+                        >
+                        <div class="dropdown-content">
+                            <a href="../index.html#menu-galushki">Галушки</a>
+                            <a href="../index.html#menu-pelmeni">Пельмени</a>
+                            <a href="../index.html#menu-specials"
+                                >Спецпредложения</a
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../index.html#delivery">Доставка и Оплата</a>
+                    </li>
+                    <li><a href="../index.html#reviews">Отзывы</a></li>
+                    <li><a href="../index.html#contact">Контакты</a></li>
+                </ul>
+                <div class="navbar-contact-info">
+                    <p>ул. Вкусная, 1</p>
+                    <a href="tel:+79991234567">+7 (968) 222-66-00</a>
+                </div>
+                <button class="burger-menu" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Секция информации о товаре -->
+        <section class="product-page-section">
+            <div class="container product-page-container">
+                <div class="product-image-gallery">
+                    <img
+                        src="../images/special1.jpg"
+                        alt="Комбо Обед Чемпиона"
+                        class="main-product-image"
+                    />
+                </div>
+                <div class="product-details">
+                    <h1 class="product-title">Комбо "Обед Чемпиона"</h1>
+                    <div class="rating">★★★★★</div>
+                    <!-- Используем price-block для комбо со старой ценой -->
+                    <div class="price-block">
+                        <p class="product-price">750 ₽</p>
+                        <p class="old-price">850 ₽</p>
+                    </div>
+
+                    <p class="product-description">
+                        Максимальная выгода и сытость в одном наборе! Комбо
+                        "Обед Чемпиона" включает в себя порцию наших нежных
+                        Классических галушек и порцию сочных Классических
+                        пельменей. Идеально для тех, кто хочет попробовать сразу
+                        два хита нашего меню по специальной цене.
+                    </p>
+
+                    <h3>Процесс изготовления:</h3>
+                    <div class="video-container">
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_6?rel=0"
+                            title="Видео о Комбо"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+
+                    <div class="additional-info">
+                        <h4>Информация о продукте:</h4>
+                        <ul>
+                            <li>
+                                <strong>В составе:</strong> Галушки
+                                "Классические" (1 порция), Пельмени
+                                "Классические" (1 порция)
+                            </li>
+                            <li>
+                                <strong>Условия хранения:</strong> Согласно
+                                условиям хранения входящих продуктов.
+                            </li>
+                            <li>
+                                <strong>Рекомендации:</strong> Быстро разогреть
+                                и наслаждаться полноценным обедом.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="../index.html#menu" class="btn btn-primary mt-20"
+                        >Вернуться в меню</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- Футер (Подвал) -->
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    © <span id="currentYear"></span> DikCham. Все права
+                    защищены.
+                </p>
+                <p>
+                    <a href="#">Политика конфиденциальности</a> |
+                    <a href="#">Условия использования</a>
+                </p>
+            </div>
+        </footer>
+
+        <div id="toast-container"></div>
+        <script src="../js/modules/uiHelpers.js"></script>
+        <script src="../js/modules/navbarController.js"></script>
+        <script src="../js/modules/scrollAnimator.js"></script>
+        <script src="../js/main.js"></script>
+        <script>
+            document.getElementById("currentYear").textContent =
+                new Date().getFullYear();
+        </script>
+    </body>
+</html>

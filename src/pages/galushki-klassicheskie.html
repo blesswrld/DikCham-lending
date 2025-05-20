@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Галушки "Классические" - DikCham</title> 
+        <link rel="stylesheet" href="../css/main.css" />
+        <!-- Добавьте сюда favicon, если есть: <link rel="icon" href="../images/favicon.ico"> -->
+    </head>
+    <body>
+        <!-- Navbar (Шапка сайта) -->
+        <nav class="navbar">
+            <div class="container navbar-content">
+                <a href="../index.html#hero"> <!-- Ссылка на главную страницу -->
+                <img src="../images/logo/logo.png" class="logo" alt="DikCham logo"></img> <!-- Путь к лого на уровень выше -->
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../index.html#about">О Нас</a></li> <!-- Ссылки на секции главной страницы -->
+                    <li class="dropdown">
+                        <a href="../index.html#menu" class="dropbtn"
+                            >Меню <span class="arrow-icon">▼</span></a
+                        >
+                        <div class="dropdown-content">
+                             <!-- Ссылки на якоря меню на главной -->
+                            <a href="../index.html#menu-galushki">Галушки</a>
+                            <a href="../index.html#menu-pelmeni">Пельмени</a>
+                            <a href="../index.html#menu-specials">Спецпредложения</a>
+                        </div>
+                    </li>
+                    <li><a href="../index.html#delivery">Доставка и Оплата</a></li>
+                    <li><a href="../index.html#reviews">Отзывы</a></li>
+                    <li><a href="../index.html#contact">Контакты</a></li>
+                </ul>
+                <div class="navbar-contact-info">
+                    <p>ул. Вкусная, 1</p>
+                    <a href="tel:+79682226600">+7 (968) 222-66-00</a>
+                </div>
+                <button class="burger-menu" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Секция информации о товаре -->
+        <section class="product-page-section">
+            <div class="container product-page-container">
+
+                <div class="product-image-gallery">
+                    <!-- !!! Основное изображение товара ДЛЯ ЭТОЙ СТРАНИЦЫ !!! -->
+                    <img src="https://vaydaar.ru/wp-content/uploads/2024/03/%D0%B3%D0%B0%D0%BB%D1%83%D1%88%D0%BA%D0%B8.png" alt="Галушки Классические" class="main-product-image">
+                    <!-- Здесь можно добавить миниатюры других изображений, если есть -->
+                    <!-- <div class="thumbnail-images">
+                         <img src="..." alt="..." class="thumbnail">
+                         <img src="..." alt="..." class="thumbnail">
+                    </div> -->
+                </div>
+
+                <div class="product-details">
+                    <h1 class="product-title">Галушки "Классические"</h1> <!-- !!! Заголовок товара !!! -->
+                    <div class="rating">★★★★★</div> <!-- Рейтинг -->
+
+                    <!-- БЛОК ЦЕНЫ - используйте этот или price-block ниже -->
+                    <p class="product-price">350 ₽</p>
+
+                    <!-- БЛОК ЦЕНЫ ДЛЯ СПЕЦПРЕДЛОЖЕНИЙ
+                    <div class="price-block">
+                         <p class="product-price">750 ₽</p>
+                         <p class="old-price">850 ₽</p>
+                    </div>
+                    -->
+
+
+                    <p class="product-description">
+                        Нежные галушки по старинному рецепту, идеальны с маслом или сметаной. Приготовлены из высококачественной муки и свежих яиц, имеют классическую форму и приятную текстуру. Прекрасно сочетаются с любыми соусами.
+                        <!-- !!! Расширенное описание ДЛЯ ЭТОГО ТОВАРА !!! -->
+                    </p>
+
+                    <h3>Процесс изготовления:</h3>
+                    <div class="video-container">
+                        <!-- Вставляем код встраивания видео с YouTube -->
+                        <!-- !!! Замените YOUR_VIDEO_ID на ID вашего видео ДЛЯ ЭТОГО ТОВАРА !!! -->
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1?rel=0"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+
+                    <!-- Дополнительная информация (ингредиенты, вес, хранение и т.д.) -->
+                    <div class="additional-info">
+                        <h4>Информация о продукте:</h4>
+                        <ul>
+                            <!-- !!! Список информации -->
+                            <li>**Состав:** Мука пшеничная в/с, яйцо куриное, вода, соль.</li>
+                            <li>**Вес:** 500 гр (упаковка)</li>
+                            <li>**Условия хранения:** При температуре не выше -18°C</li>
+                            <li>**Срок годности:** 6 месяцев</li>
+                        </ul>
+                    </div>
+
+                    <!-- Кнопка "Вернуться в меню" -->
+                    <a href="../index.html#menu" class="btn btn-primary mt-20">Вернуться в меню</a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Футер (Подвал)  -->
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    © <span id="currentYear"></span> DikCham. Все права
+                    защищены.
+                </p>
+                <p>
+                    <a href="#">Политика конфиденциальности</a> |
+                    <a href="#">Условия использования</a>
+                </p>
+            </div>
+        </footer>
+
+        <div id="toast-container"></div>
+
+         <!-- Подключение скриптов -->
+         <script src="../js/modules/uiHelpers.js"></script>
+        <script src="../js/modules/navbarController.js"></script>
+        <script src="../js/modules/scrollAnimator.js"></script>
+        <script src="../js/main.js"></script>
+         <script>
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+         </script>
+    </body>
+</html>

@@ -32,7 +32,7 @@
                 </ul>
                 <div class="navbar-contact-info">
                     <p>ул. Вкусная, 1</p>
-                    <a href="tel:+79991234567">+7 (968) 222-66-00</a>
+                    <a href="tel:+79682226600">+7 (968) 222-66-00</a>
                 </div>
                 <button class="burger-menu" aria-label="Открыть меню">
                     <span></span>
@@ -109,7 +109,7 @@
             </div>
         </section>
 
-        <!-- Секция "Меню" -->
+       <!-- Секция "Меню" -->
         <section id="menu" class="menu-section">
             <div class="container">
                 <h2>Наше Меню</h2>
@@ -117,88 +117,143 @@
                 <div id="menu-galushki" class="menu-category">
                     <h3>Галушки</h3>
                     <div class="menu-grid">
+                        <!-- Галушки "Классические" -->
                         <div class="menu-item">
-                            <img
-                                src="https://vaydaar.ru/wp-content/uploads/2024/03/%D0%B3%D0%B0%D0%BB%D1%83%D1%88%D0%BA%D0%B8.png"
-                                alt="Галушки Классические"
-                            />
-                            <h4>Галушки "Классические"</h4>
-                            <p class="description">
-                                Нежные галушки по старинному рецепту.
-                            </p>
-                            <p class="price">350 руб.</p>
-                            <button class="btn btn-secondary">Заказать</button>
+                            <!-- Сделаем обертку изображения ссылкой на страницу товара -->
+                            <a href="pages/galushki-klassicheskie.html" class="item-image-wrapper">
+                                <img
+                                    src="https://vaydaar.ru/wp-content/uploads/2024/03/%D0%B3%D0%B0%D0%BB%D1%83%D1%88%D0%BA%D0%B8.png"
+                                    alt="Галушки Классические"
+                                />
+                                <!-- Быстрый просмотр теперь внутри ссылки -->
+                                <div class="quick-view-overlay">Быстрый просмотр</div>
+                            </a>
+                            <div class="item-content">
+                                <div class="rating">
+                                    ★★★★★ <!-- Placeholder for rating -->
+                                </div>
+                                <p class="price">350 ₽</p>
+                                <h4 class="item-title">Галушки "Классические"</h4>
+                                <p class="item-category">Нежные галушки по старинному рецепту, идеальны с маслом или сметаной.</p>
+                            </div>
                         </div>
-                        <!-- <div class="menu-item">
-                            <img
-                                src="images/galushka2.jpg"
-                                alt="Галушки с Сыром"
-                            />
-                            <h4>Галушки "С Сыром"</h4>
-                            <p class="description">
-                                Ароматные галушки с тянущимся сыром.
-                            </p>
-                            <p class="price">400 руб.</p>
-                            <button class="btn btn-secondary">Заказать</button>
-                        </div> -->
-                        <!-- <div class="menu-item">
-                            <img
-                                src="images/galushka3.jpg"
-                                alt="Галушки с Грибами"
-                            />
-                            <h4>Галушки "С Грибами"</h4>
-                            <p class="description">
-                                Сытные галушки с лесными грибами и сметаной.
-                            </p>
-                            <p class="price">420 руб.</p>
-                            <button class="btn btn-secondary">Заказать</button>
-                        </div> -->
+                        <!-- Галушки "Кукурузные" -->
+                        <div class="menu-item">
+                             <!-- Сделаем обертку изображения ссылкой на страницу товара -->
+                            <a href="pages/galushki-kukuruza.html" class="item-image-wrapper">
+                                <img
+                                    src="images/catalog/maxresdefault-removebg-preview.png"
+                                    alt="Галушки Кукурузные"
+                                />
+                                <!-- Быстрый просмотр теперь внутри ссылки -->
+                                <div class="quick-view-overlay">Быстрый просмотр</div>
+                            </a>
+                            <div class="item-content">
+                                <div class="rating">
+                                    ★★★★★ <!-- Placeholder for rating -->
+                                </div>
+                                <p class="price">490 ₽</p>
+                                <h4 class="item-title">Галушки "Кукурузные"</h4>
+                                <p class="item-category">Нежные галушки с добавлением кукурузной муки для особого вкуса и текстуры.</p>
+                            </div>
+                        </div>
+                        <!-- Йоьхь -->
+                        <div class="menu-item">
+                            <!-- Сделаем обертку изображения ссылкой на страницу товара -->
+                            <a href="pages/yokh.html" class="item-image-wrapper">
+                                <img
+                                    src="images/catalog/1577374996_1-removebg-preview.png"
+                                    alt="Йоьхь"
+                                />
+                                <!-- Быстрый просмотр теперь внутри ссылки -->
+                                <div class="quick-view-overlay">Быстрый просмотр</div>
+                            </a>
+                            <div class="item-content">
+                                <div class="rating">
+                                    ★★★★★ <!-- Placeholder for rating -->
+                                </div>
+                                <p class="price">910 ₽</p>
+                                <h4 class="item-title">Йоьхь</h4>
+                                <p class="item-category">Традиционный чеченский мясной продукт с насыщенным вкусом и ароматом специй.</p>
+                            </div>
+                        </div>
+                        <!-- Баарш (Рубец) -->
+                        <div class="menu-item">
+                             <!-- Сделаем обертку изображения ссылкой на страницу товара -->
+                            <a href="pages/baarsh.html" class="item-image-wrapper">
+                                <img
+                                    src="https://ecomarket.ru/imgs/products/18881/kolbasa--podkopchenaya-vegan_9_1726597285.jpg"
+                                    alt="Баарш (Рубец)"
+                                />
+                                <!-- Быстрый просмотр теперь внутри ссылки -->
+                                <div class="quick-view-overlay">Быстрый просмотр</div>
+                            </a>
+                            <div class="item-content">
+                                <div class="rating">
+                                    ★★★★★ <!-- Placeholder for rating -->
+                                </div>
+                                <p class="price">750 ₽</p>
+                                <h4 class="item-title">Баарш (Рубец)</h4>
+                                <p class="item-category">Национальное блюдо из рубца, приготовленное по особому рецепту с ароматными специями.</p>
+                            </div>
+                        </div>
+                        <!-- Add more Galushki items here following the same structure if needed -->
+                         <!-- <div class="menu-item"> ... </div> -->
                     </div>
                 </div>
 
                 <div id="menu-pelmeni" class="menu-category">
                     <h3>Пельмени</h3>
                     <div class="menu-grid">
+                        <!-- Пельмени "Классические" -->
                         <div class="menu-item">
-                            <img
-                                src="https://mega-tray.ru/templates/yootheme/cache/2a/4016-pelmeni-1080-2a808c93.jpeg"
-                                alt="Пельмени классические"
-                            />
-                            <h4>Пельмени "Классические"</h4>
-                            <p class="description">
-                                Сочные пельмени с отборным мясом (говядина).
-                            </p>
-                            <p class="price">450 руб.</p>
-                            <button class="btn btn-secondary">Заказать</button>
+                            <!-- Сделаем обертку изображения ссылкой на страницу товара -->
+                            <a href="pages/pelmeni-klassicheskie.html" class="item-image-wrapper">
+                                <img
+                                    src="https://mega-tray.ru/templates/yootheme/cache/2a/4016-pelmeni-1080-2a808c93.jpeg"
+                                    alt="Пельмени классические"
+                                />
+                                 <!-- Быстрый просмотр теперь внутри ссылки -->
+                                 <div class="quick-view-overlay">Быстрый просмотр</div>
+                            </a>
+                             <div class="item-content">
+                                <div class="rating">
+                                     ★★★★★ <!-- Placeholder for rating -->
+                                </div>
+                                <p class="price">450 ₽</p>
+                                <h4 class="item-title">Пельмени "Классические"</h4>
+                                <p class="item-category">Сочные пельмени с начинкой из отборной говядины, слепленные вручную по традиционному рецепту.</p>
+                            </div>
                         </div>
-                        <!-- <div class="menu-item">
-                            <img
-                                src="images/pelmeni2.jpg"
-                                alt="Пельмени с Курицей"
-                            />
-                            <h4>Пельмени "Нежные"</h4>
-                            <p class="description">
-                                Легкие пельмени с куриным филе и зеленью.
-                            </p>
-                            <p class="price">430 руб.</p>
-                            <button class="btn btn-secondary">Заказать</button>
-                        </div> -->
+                         <!-- Add more Pelmeni items here following the same structure if needed -->
+                         <!-- <div class="menu-item"> ... </div> -->
                     </div>
                 </div>
 
                 <div id="menu-specials" class="menu-category">
                     <h3>Спецпредложения</h3>
                     <div class="menu-grid">
+                        <!-- Комбо "Обед Чемпиона" -->
                         <div class="menu-item special-offer">
-                            <img src="images/special1.jpg" alt="Комбо Обед" />
-                            <h4>Комбо "Обед Чемпиона"</h4>
-                            <p class="description">
-                                Галушки "Классические" + Пельмени "Классические"
-                                + Домашний морс.
-                            </p>
-                            <p class="price old-price">850 руб.</p>
-                            <p class="price">750 руб.</p>
-                            <button class="btn btn-secondary">Заказать</button>
+                             <!-- Сделаем обертку изображения ссылкой на страницу товара -->
+                             <a href="pages/kombo-chempiona.html" class="item-image-wrapper">
+                                <img src="images/special1.jpg" alt="Комбо Обед" />
+                                 <!-- Быстрый просмотр теперь внутри ссылки -->
+                                 <div class="quick-view-overlay">Быстрый просмотр</div>
+                            </a>
+                             <div class="item-content">
+                                <div class="rating">
+                                     ★★★★★ <!-- Placeholder for rating -->
+                                </div>
+                                <div class="price-block">
+                                    <p class="price">750 ₽</p>
+                                    <p class="old-price">850 ₽</p>
+                                </div>
+                                <h4 class="item-title">Комбо "Обед Чемпиона"</h4>
+                                <p class="item-category">Выгодный набор: Галушки "Классические" + Пельмени "Классические" </p>
+                            </div>
+                             <!-- The "Акция" tag positioned like the "Новинка" tag -->
+                             <span class="item-tag special-tag">Акция!</span>
                         </div>
                     </div>
                 </div>
@@ -233,7 +288,7 @@
                         <ul class="payment-methods">
                             <li>
                                 <img
-                                    src="https://lh4.googleusercontent.com/proxy/2qy5cAg-oCgY-cyQh0CUoIlgjeMlJFXU9phL5rX8fLNUMkgc3-A2zdUPfWJxMXSC4Jixlc9sAJae_jr73To883usiLIEZXMg3yA7LIuny0E7FiemKrEimGAGXTKyIfKosIzHJk12bM8"
+                                    src="https://dez-market.ru/upload/oplata_s.png"
                                     alt="Наличные"
                                 />
                                 Наличными курьеру
@@ -276,14 +331,8 @@
                         </ul>
                         <p>
                             Для оформления заказа звоните:
-                            <a href="tel:+79991234567">+7 (968) 222-66-00</a>
+                            <a href="tel:+79682226600">+7 (968) 222-66-00</a>
                         </p>
-                    </div>
-                    <div class="delivery-image">
-                        <img
-                            src="https://www.profreshenie.com/articles/february%202016/2.jpg"
-                            alt="Курьер с заказом"
-                        />
                     </div>
                 </div>
             </div>
@@ -332,7 +381,7 @@
                         </p>
                         <p>
                             <strong>Телефон:</strong>
-                            <a href="tel:+79991234567">+7 (968) 222-66-00</a>
+                            <a href="tel:+79682226600">+7 (968) 222-66-00</a>
                         </p>
                         <p>
                             <strong>Email:</strong>
@@ -397,7 +446,7 @@
          <script src="js/modules/uiHelpers.js"></script>
         <script src="js/modules/navbarController.js"></script>
         <script src="js/modules/scrollAnimator.js"></script>
-        <script src="js/modules/cartHandler.js"></script>
+        <!-- <script src="js/modules/cartHandler.js"></script> -->
         <script src="js/main.js"></script>
     </body>
 </html>

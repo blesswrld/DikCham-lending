@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Баарш (Рубец) - DikCham</title>
+        <link rel="stylesheet" href="../css/main.css" />
+        <!-- Добавьте сюда favicon, если есть: <link rel="icon" href="../images/favicon.ico"> -->
+    </head>
+    <body>
+        <!-- Navbar (Шапка сайта) -->
+        <nav class="navbar">
+            <div class="container navbar-content">
+                <a href="../index.html#hero">
+                    <img
+                        src="../images/logo/logo.png"
+                        class="logo"
+                        alt="DikCham logo"
+                    />
+                </a>
+                <ul class="nav-links">
+                    <li><a href="../index.html#about">О Нас</a></li>
+                    <li class="dropdown">
+                        <a href="../index.html#menu" class="dropbtn"
+                            >Меню <span class="arrow-icon">▼</span></a
+                        >
+                        <div class="dropdown-content">
+                            <a href="../index.html#menu-galushki">Галушки</a>
+                            <a href="../index.html#menu-pelmeni">Пельмени</a>
+                            <a href="../index.html#menu-specials"
+                                >Спецпредложения</a
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../index.html#delivery">Доставка и Оплата</a>
+                    </li>
+                    <li><a href="../index.html#reviews">Отзывы</a></li>
+                    <li><a href="../index.html#contact">Контакты</a></li>
+                </ul>
+                <div class="navbar-contact-info">
+                    <p>ул. Вкусная, 1</p>
+                    <a href="tel:+79991234567">+7 (968) 222-66-00</a>
+                </div>
+                <button class="burger-menu" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Секция информации о товаре -->
+        <section class="product-page-section">
+            <div class="container product-page-container">
+                <div class="product-image-gallery">
+                    <img
+                        src="https://ecomarket.ru/imgs/products/18881/kolbasa--podkopchenaya-vegan_9_1726597285.jpg"
+                        alt="Баарш (Рубец)"
+                        class="main-product-image"
+                    />
+                </div>
+                <div class="product-details">
+                    <h1 class="product-title">Баарш (Рубец)</h1>
+                    <div class="rating">★★★★★</div>
+                    <p class="product-price">750 ₽</p>
+
+                    <p class="product-description">
+                        Национальное блюдо из тщательно обработанного говяжьего
+                        рубца, тушенного с луком и ароматными специями. Имеет
+                        насыщенный вкус и мягкую текстуру. Традиционно подается
+                        горячим, часто с чесноком и специями.
+                    </p>
+
+                    <h3>Процесс изготовления:</h3>
+                    <div class="video-container">
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_4?rel=0"
+                            title="Видео о Баарш"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+
+                    <div class="additional-info">
+                        <h4>Информация о продукте:</h4>
+                        <ul>
+                            <li>
+                                <strong>Состав:</strong> Рубец говяжий, лук
+                                репчатый, специи, соль.
+                            </li>
+                            <li><strong>Вес:</strong> 500 гр (упаковка)</li>
+                            <li>
+                                <strong>Условия хранения:</strong> При
+                                температуре не выше -18°C.
+                            </li>
+                            <li>
+                                <strong>Срок годности:</strong> 3 месяца с даты
+                                изготовления.
+                            </li>
+                            <li>
+                                <strong>Рекомендации:</strong> Разогреть перед
+                                подачей. Можно подавать с галушками или
+                                картофелем.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="../index.html#menu" class="btn btn-primary mt-20"
+                        >Вернуться в меню</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- Футер (Подвал) -->
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    © <span id="currentYear"></span> DikCham. Все права
+                    защищены.
+                </p>
+                <p>
+                    <a href="#">Политика конфиденциальности</a> |
+                    <a href="#">Условия использования</a>
+                </p>
+            </div>
+        </footer>
+
+        <div id="toast-container"></div>
+        <script src="../js/modules/uiHelpers.js"></script>
+        <script src="../js/modules/navbarController.js"></script>
+        <script src="../js/modules/scrollAnimator.js"></script>
+        <script src="../js/main.js"></script>
+        <script>
+            document.getElementById("currentYear").textContent =
+                new Date().getFullYear();
+        </script>
+    </body>
+</html>

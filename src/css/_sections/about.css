@@ -1,4 +1,3 @@
-/* About Section */
 #about {
     background-color: var(--bg-main);
 }
@@ -17,7 +16,7 @@
     margin-top: 40px;
 }
 .feature-item {
-    opacity: 0;
+    opacity: 0; /* Для анимации появления через JS */
     flex-basis: 30%;
     text-align: center;
     padding: 30px 25px;
@@ -25,6 +24,7 @@
     border: 1px solid #eaeaea;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow; /* Подсказка для браузера */
 }
 .feature-item:hover {
     transform: translateY(-8px);
@@ -34,8 +34,8 @@
     width: 60px;
     height: 60px;
     object-fit: contain;
-    margin-bottom: 20px;
-    color: var(--brand-primary-accent);
+    margin: 0 auto 20px auto;
+    display: block;
 }
 .feature-item h3 {
     margin-bottom: 10px;

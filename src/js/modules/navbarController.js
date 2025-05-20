@@ -1,5 +1,3 @@
-// js/modules/navbarController.js
-
 /**
  * Sets up smooth scrolling for anchor links.
  * @param {HTMLElement} navbar - The navigation bar element.

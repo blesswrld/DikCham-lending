@@ -1,4 +1,3 @@
-/* Базовые стили и сброс */
 * {
     margin: 0;
     padding: 0;
@@ -37,6 +36,9 @@
     --info-color-text: var(--text-on-light-primary);
     --success-color-bg: var(--color-olive-green);
     --success-color-text: var(--text-on-dark);
+
+    --border-color: #eee;
+    --color-light-green: #4caf50;
 }
 
 html {
@@ -49,6 +51,9 @@ body {
     color: var(--text-on-light-primary);
     background-color: var(--bg-main);
     font-size: 16px;
+    min-height: 100vh; /* Убедимся, что body занимает как минимум 100% высоты вьюпорта */
+    display: flex;
+    flex-direction: column; /* Чтобы футер прижимался к низу, если контента мало */
 }
 
 .container {

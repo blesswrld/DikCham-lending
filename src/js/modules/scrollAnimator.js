@@ -1,5 +1,3 @@
-// js/modules/scrollAnimator.js
-
 /**
  * Sets up scroll-triggered animations for elements using Intersection Observer.
  * @param {string} selector - The CSS selector for elements to animate.
