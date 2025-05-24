@@ -1,11 +1,11 @@
 /**
- * Sets up smooth scrolling for anchor links.
- * @param {HTMLElement} navbar - The navigation bar element.
- * @param {number} initialNavbarHeight - The initial height of the navbar.
- * @param {HTMLElement} navLinksContainer - The container for navigation links.
- * @param {HTMLElement} burgerMenu - The burger menu button.
+ * Настраивает плавную прокрутку для якорных ссылок.
+ * @param {HTMLElement} navbar - Элемент навигационной панели.
+ * @param {number} initialNavbarHeight - Изначальная высота навигационной панели.
+ * @param {HTMLElement} navLinksContainer - Контейнер для навигационных ссылок.
+ * @param {HTMLElement} burgerMenu - Кнопка бургер-меню.
  */
-function setupSmoothScroll(
+export function setupSmoothScroll( // Добавлено export
     navbar,
     initialNavbarHeight,
     navLinksContainer,
@@ -20,7 +20,6 @@ function setupSmoothScroll(
             if (targetElement) {
                 let currentNavbarHeight = initialNavbarHeight;
                 if (navbar && navbar.classList.contains("scrolled")) {
-                    // Recalculate if navbar height changes when scrolled
                     currentNavbarHeight = navbar.offsetHeight;
                 } else if (navbar) {
                     currentNavbarHeight = navbar.offsetHeight;
@@ -34,7 +33,6 @@ function setupSmoothScroll(
                     behavior: "smooth",
                 });
 
-                // Close mobile menu if open
                 if (
                     burgerMenu &&
                     navLinksContainer &&
@@ -49,13 +47,13 @@ function setupSmoothScroll(
 }
 
 /**
- * Highlights the active navigation link based on scroll position.
- * @param {HTMLElement} navbar - The navigation bar element.
- * @param {number} initialNavbarHeight - The initial height of the navbar.
- * @param {HTMLElement} navLinksContainer - The container for navigation links.
- * @param {NodeListOf<HTMLElement>} sections - A NodeList of all section elements with IDs.
+ * Подсвечивает активную навигационную ссылку в зависимости от положения прокрутки.
+ * @param {HTMLElement} navbar - Элемент навигационной панели.
+ * @param {number} initialNavbarHeight - Изначальная высота навигационной панели.
+ * @param {HTMLElement} navLinksContainer - Контейнер для навигационных ссылок.
+ * @param {NodeListOf<HTMLElement>} sections - NodeList всех элементов секций с ID.
  */
-function setupNavHighlighter(
+export function setupNavHighlighter( // Добавлено export
     navbar,
     initialNavbarHeight,
     navLinksContainer,
@@ -72,7 +70,6 @@ function setupNavHighlighter(
 
         sections.forEach((current) => {
             const sectionHeight = current.offsetHeight;
-            // Adjust sectionTop to account for the current navbar height and add a small offset
             const sectionTop = current.offsetTop - currentNavbarHeight - 50;
 
             if (
@@ -95,14 +92,15 @@ function setupNavHighlighter(
     }
 
     window.addEventListener("scroll", highlight);
-    highlight(); // Initial call
+    highlight();
 }
 
 /**
- * Adds a scroll listener to change the navbar's appearance.
- * @param {HTMLElement} navbar - The navigation bar element.
+ * Добавляет слушатель прокрутки для изменения внешнего вида навигационной панели.
+ * @param {HTMLElement} navbar - Элемент навигационной панели.
  */
-function setupNavbarScrollListener(navbar) {
+export function setupNavbarScrollListener(navbar) {
+    // Добавлено export
     if (navbar) {
         window.addEventListener("scroll", () => {
             if (window.scrollY > 50) {
@@ -115,11 +113,12 @@ function setupNavbarScrollListener(navbar) {
 }
 
 /**
- * Sets up the toggle functionality for the burger menu.
- * @param {HTMLElement} burgerMenu - The burger menu button.
- * @param {HTMLElement} navLinksContainer - The container for navigation links.
+ * Настраивает функциональность переключения для бургер-меню.
+ * @param {HTMLElement} burgerMenu - Кнопка бургер-меню.
+ * @param {HTMLElement} navLinksContainer - Контейнер для навигационных ссылок.
  */
-function setupBurgerMenu(burgerMenu, navLinksContainer) {
+export function setupBurgerMenu(burgerMenu, navLinksContainer) {
+    // Добавлено export
     if (burgerMenu && navLinksContainer) {
         burgerMenu.addEventListener("click", () => {
             burgerMenu.classList.toggle("active");

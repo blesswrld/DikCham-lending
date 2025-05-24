@@ -155,15 +155,6 @@
     .menu-grid {
         grid-template-columns: 1fr;
     }
-    #toast-container {
-        right: 10px;
-        bottom: 10px;
-        max-width: calc(100% - 20px);
-        width: auto;
-    }
-    .toast {
-        min-width: 0;
-    }
 
     /* Отступы на странице товара для мобильных */
     .product-page-section {

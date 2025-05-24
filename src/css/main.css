@@ -4,7 +4,7 @@
 
 @import "_components/buttons.css";
 @import "_components/navbar.css";
-@import "_components/toasts.css";
+@import "_components/lightbox-overlay.css";
 
 @import "_layout/footer.css";
 @import "_layout/sections_general.css";
