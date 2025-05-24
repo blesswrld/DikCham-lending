@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 /* css/_base/base_styles.css */
 
+=======
+>>>>>>> AVERSION
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +10,7 @@
 }
 
 :root {
+<<<<<<< HEAD
     /* Modern Palette: Dark Gray, White, Bright Blue Accent */
     --color-primary-accent: #007bff; /* Bright Blue */
     --color-primary-accent-hover: #0056b3; /* Darker Blue */
@@ -20,12 +24,29 @@
     --color-background-main: #ffffff; /* White */
     --color-background-alt: #f8f9fa; /* Light Gray for alternating sections */
     --color-background-dark: #212529; /* Very dark gray / Near black for dark sections like footer */
+=======
+    --color-dark-green: #4a5c32;
+    --color-olive-green: #6b8258;
+    --color-tan: #c89f70;
+    --color-dark-brown: #5d4037;
+    --color-dumpling-dark: #2a2a2a;
+
+    --text-on-dark: #f5efe6;
+    --text-on-light-primary: #3e2723;
+    --text-on-light-secondary: #604c42;
+
+    --bg-main: #fbf9f6;
+    --bg-alt-section: #f4f0e9;
+    --bg-card: #ffffff;
+    --bg-navbar: #ffffff;
+>>>>>>> AVERSION
 
     --color-card-bg: #ffffff; /* White for cards */
     --color-border: #dee2e6; /* Light Gray for borders */
     --color-shadow: rgba(0, 0, 0, 0.06); /* Slightly softer shadow */
     --color-shadow-hover: rgba(0, 0, 0, 0.12);
 
+<<<<<<< HEAD
     --color-navbar-bg: #ffffff;
     --color-navbar-bg-scrolled: rgba(
         255,
@@ -36,15 +57,30 @@
     --color-navbar-text: var(--color-text-dark);
     --color-navbar-link-hover: var(--color-primary-accent);
     --color-navbar-border-bottom: var(--color-border);
+=======
+    --action-primary-hover: #7d9a6b;
+    --action-secondary-hover: #b08a5d;
+>>>>>>> AVERSION
 
     --color-footer-bg: var(--color-text-dark); /* Using text-dark for footer */
     --color-footer-text: #adb5bd; /* Lighter Gray for footer text */
     --color-footer-link: var(--color-primary-accent);
 
+<<<<<<< HEAD
     --color-error: #dc3545; /* Red */
     --color-success: #28a745; /* Green */
     --color-info-bg: #17a2b8; /* Teal/Info Blue */
     --toast-text-light: #ffffff; /* White for toast text */
+=======
+    --error-color: #c0392b;
+    --info-color-bg: var(--color-tan);
+    --info-color-text: var(--text-on-light-primary);
+    --success-color-bg: var(--color-olive-green);
+    --success-color-text: var(--text-on-dark);
+
+    --border-color: #eee;
+    --color-light-green: #4caf50;
+>>>>>>> AVERSION
 }
 
 html {
@@ -57,8 +93,14 @@ body {
     color: var(--color-text-dark);
     background-color: var(--color-background-main);
     font-size: 16px;
+<<<<<<< HEAD
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+=======
+    min-height: 100vh; /* Убедимся, что body занимает как минимум 100% высоты вьюпорта */
+    display: flex;
+    flex-direction: column; /* Чтобы футер прижимался к низу, если контента мало */
+>>>>>>> AVERSION
 }
 
 .container {

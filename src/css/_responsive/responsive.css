@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 /* css/_responsive/responsive.css */
 
+=======
+>>>>>>> AVERSION
 @media (max-width: 992px) {
     .navbar-contact-info {
         display: none;
     }
+<<<<<<< HEAD
     .about-features {
         flex-direction: column;
         gap: 20px;
@@ -11,6 +15,13 @@
     .feature-item {
         flex-basis: auto;
     }
+=======
+    .logo {
+        width: 72px;
+        height: 72px;
+    }
+    .about-features,
+>>>>>>> AVERSION
     .delivery-info,
     .contact-content {
         flex-direction: column;
@@ -20,14 +31,27 @@
         margin-top: 25px; /* Adjusted margin */
         width: 100%;
     }
+    .about-features .feature-item,
+    .delivery-info .delivery-text,
+    .delivery-info .delivery-image,
+    .contact-content .contact-details,
+    .contact-content .contact-map {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
     .hero-section h1 {
         font-size: 2.5rem; /* Adjusted size */
     }
     h2 {
+<<<<<<< HEAD
         font-size: 1.9rem; /* Adjusted size */
     }
     .menu-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+=======
+        font-size: 2.2rem;
+>>>>>>> AVERSION
     }
 }
 
@@ -78,6 +102,18 @@
         padding: 0;
     }
 
+<<<<<<< HEAD
+=======
+    .logo {
+        width: 62px;
+        height: 62px;
+    }
+
+    .navbar.scrolled .nav-links {
+        top: 100%;
+    }
+
+>>>>>>> AVERSION
     .nav-links.active {
         display: flex;
     }
@@ -119,8 +155,13 @@
     .dropdown-content {
         position: static;
         box-shadow: none;
+<<<<<<< HEAD
         border-top: 1px solid var(--color-navbar-border-bottom);
         background-color: var(--color-background-alt);
+=======
+        border-top: 1px solid #e0e0e0;
+        background-color: var(--bg-alt-section);
+>>>>>>> AVERSION
         width: 100%;
         border-radius: 0;
         transform: none;
@@ -129,15 +170,22 @@
         display: none;
         padding: 0;
     }
+<<<<<<< HEAD
     .dropdown.open .dropdown-content {
         /* JS should add 'open' class to .dropdown */
         display: block;
     }
+=======
+>>>>>>> AVERSION
 
     .dropdown-content a {
         padding: 10px 20px 10px 30px; /* Indent sub-items */
         font-size: 0.9rem;
+<<<<<<< HEAD
         border-bottom: 1px solid var(--color-navbar-border-bottom);
+=======
+        border-bottom: 1px solid #eee;
+>>>>>>> AVERSION
     }
     .dropdown-content a:last-child {
         border-bottom: none;
@@ -154,6 +202,7 @@
         font-size: 1rem;
     }
     h2 {
+<<<<<<< HEAD
         font-size: 1.7rem;
         margin-bottom: 30px;
     }
@@ -166,10 +215,25 @@
     .btn {
         padding: 9px 20px;
         font-size: 0.85rem;
+=======
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+    h2::after {
+        width: 60px;
+    }
+    section {
+        padding: 60px 0;
+    }
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+>>>>>>> AVERSION
     }
     .menu-grid {
         grid-template-columns: 1fr;
     }
+<<<<<<< HEAD
     .menu-item img {
         height: 200px;
     }
@@ -210,5 +274,41 @@
     }
     h2 {
         font-size: 1.5rem;
+=======
+
+    /* Отступы на странице товара для мобильных */
+    .product-page-section {
+        padding: 100px 0 60px 0;
+    }
+    .product-page-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .product-details {
+        flex: 1 1 auto;
+        max-width: 100%;
+    }
+
+    .product-title {
+        font-size: 2rem;
+    }
+
+    .product-price {
+        font-size: 1.8rem;
+    }
+
+    .product-details .price-block .product-price {
+        font-size: 1.8rem;
+    }
+
+    .product-details h3 {
+        font-size: 1.5rem;
+    }
+
+    .product-description,
+    .additional-info ul {
+        font-size: 1rem;
+>>>>>>> AVERSION
     }
 }

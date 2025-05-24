@@ -1,0 +1,398 @@
+/* css/_sections/product_page.css */
+.product-page-section {
+    padding: 120px 0 80px 0;
+    background-color: var(--bg-alt-section);
+}
+
+.product-page-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    align-items: flex-start;
+}
+
+/* --- Стили для Галереи Изображений --- */
+.product-image-gallery {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+/* --- Стили для Обертки Основного Изображения --- */
+.main-product-image-wrapper {
+    width: 100%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Стили для Основного Изображения --- */
+.main-product-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: zoom-in; /* Добавлено из JS, можно прописать здесь */
+}
+
+/* --- Стили для Контейнера Миниатюр --- */
+.thumbnail-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* --- Стили для Миниатюр --- */
+.thumbnail,
+.thumbnail-image {
+    width: 90px; /* Размер миниатюр */
+    height: 90px; /* Размер миниатюр */
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid var(--border-color, #e0e0e0);
+    transition: border-color 0.3s ease, transform 0.2s ease,
+        box-shadow 0.2s ease;
+    background-color: #ffffff;
+}
+
+/* --- Стили для Миниатюр при Наведении --- */
+.thumbnail:hover,
+.thumbnail-image:hover {
+    border-color: var(--brand-primary-accent);
+    transform: scale(1.07);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Стили для Активной Миниатюры --- */
+.thumbnail.active,
+.thumbnail-image.active {
+    border-color: var(--brand-primary-accent);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); /* Тот же стиль, что и при наведении, но без transform */
+}
+
+/* --- Стили для Блока Деталей Товара --- */
+.product-details {
+    flex: 1 1 50%;
+}
+
+/* --- Стили для Заголовка Товара --- */
+.product-title {
+    font-size: 2.5rem;
+    color: var(--brand-headings);
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+/* --- Стили для Рейтинга --- */
+.product-details .rating {
+    color: #ffc107;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* --- Стили для Цены Товара --- */
+.product-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-dark-green);
+    margin: 0 0 15px 0;
+}
+
+/* --- Стили для Блока Цен (если есть старая и новая) --- */
+.product-details .price-block {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+
+.product-details .price-block .product-price {
+    font-size: 2rem;
+    margin-right: 15px;
+    margin-bottom: 0;
+}
+
+.product-details .old-price {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: var(--text-on-light-secondary);
+}
+
+/* --- Стили для Описания Товара --- */
+.product-description {
+    font-size: 1.1rem;
+    color: var(--text-on-light-primary);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* --- Стили для Подзаголовков в Деталях Товара (h3) --- */
+.product-details h3 {
+    font-size: 1.8rem;
+    color: var(--brand-headings);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--brand-primary-accent);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+/* --- Стили для Контейнера Видео --- */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+    height: 0;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- Стили для Блока Дополнительной Информации --- */
+.additional-info {
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+.additional-info h4 {
+    font-size: 1.3rem;
+    color: var(--text-on-light-primary);
+    margin-bottom: 10px;
+}
+
+.additional-info ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: var(--text-on-light-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.additional-info ul li {
+    margin-bottom: 5px;
+}
+
+.additional-info ul li strong {
+    color: var(--text-on-light-primary);
+}
+
+/* --- Вспомогательный класс для отступа сверху --- */
+.mt-20 {
+    margin-top: 20px;
+}
+
+/* --- Адаптивные стили --- */
+@media (min-width: 769px) {
+    .product-image-gallery {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 992px) {
+    .product-image-gallery {
+        flex-basis: 40%;
+    }
+    .product-details {
+        flex-basis: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-page-section {
+        padding: 100px 0 60px 0;
+    }
+    .product-page-container {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .product-image-gallery {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 0; /* Убран внутренний отступ из .product-image-gallery на мобильных */
+        gap: 15px;
+    }
+
+    .main-product-image-wrapper {
+        max-width: calc(100% - 30px);
+    }
+
+    .thumbnail,
+    .thumbnail-image {
+        width: 75px; /* Размер миниатюр на мобильных */
+        height: 75px;
+    }
+
+    .product-details {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .product-title {
+        font-size: 2rem;
+    }
+
+    .product-price,
+    .product-details .price-block .product-price {
+        font-size: 1.8rem;
+    }
+    .product-details .price-block {
+        justify-content: center;
+    }
+
+    .product-details h3 {
+        font-size: 1.5rem;
+        display: block;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    .product-details h3::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 2px;
+        background: var(--brand-primary-accent);
+        margin: 8px auto 0;
+    }
+
+    .product-description,
+    .additional-info ul {
+        font-size: 1rem;
+        text-align: left;
+    }
+    .additional-info ul {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-product-image-wrapper {
+        max-width: calc(100% - 20px);
+    }
+    .product-title {
+        font-size: 1.8rem;
+    }
+    .product-price,
+    .product-details .price-block .product-price {
+        font-size: 1.6rem;
+    }
+    .thumbnail,
+    .thumbnail-image {
+        width: 65px; /* Размер миниатюр на маленьких мобильных */
+        height: 65px;
+    }
+
+    .product-details h3::after {
+        width: 50px;
+    }
+}
+
+/* --- Стили для Лайтбокса (Модального окна изображений) --- */
+.lightbox-overlay {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-content {
+    display: block;
+    max-width: 80%; /* Максимальная ширина изображения в лайтбоксе */
+    max-height: 80%; /* Максимальная высота изображения в лайтбоксе */
+    margin: auto;
+    border-radius: 5px;
+    transform: scale(0.8);
+    transition: transform 0.3s ease 0.1s;
+}
+
+.lightbox-overlay.active .lightbox-content {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.lightbox-caption {
+    margin: 15px auto 0;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    font-size: 1rem;
+    padding: 10px 0;
+}
+
+@media (max-width: 700px) {
+    /* Адаптивность для лайтбокса */
+    .lightbox-content {
+        max-width: 95%;
+        max-height: 80%;
+    }
+    .lightbox-close {
+        font-size: 30px;
+        top: 15px;
+        right: 25px;
+    }
+}

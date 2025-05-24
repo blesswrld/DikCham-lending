@@ -1,13 +1,27 @@
+<<<<<<< HEAD
 /* css/_sections/delivery.css */
 
 .delivery-info {
     display: flex;
     gap: 40px;
     align-items: flex-start; /* Изменено с center на flex-start */
+=======
+.delivery-info {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+>>>>>>> AVERSION
 }
 .delivery-text {
     opacity: 0;
     flex: 1.2;
+    min-width: 300px;
+}
+.delivery-text > p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: var(--text-on-light-primary);
 }
 .delivery-text > p {
     margin-bottom: 20px;
@@ -15,7 +29,39 @@
 .delivery-text ul {
     list-style: none;
     padding-left: 0;
+<<<<<<< HEAD
+=======
+    margin-bottom: 25px;
+}
+.delivery-text li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    color: var(--text-on-light-secondary);
+    font-size: 1rem;
+}
+.delivery-text li::before {
+    content: "✔";
+    color: var(--brand-primary-accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    top: 0;
+}
+.delivery-text h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: var(--brand-headings);
+}
+.payment-methods {
+    list-style: none;
+    padding-left: 0;
+>>>>>>> AVERSION
     margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 25px;
 }
 .delivery-text li {
     margin-bottom: 12px;
@@ -45,6 +91,7 @@
 .payment-methods li {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     margin-bottom: 10px;
     font-size: 0.95rem;
 }
@@ -58,6 +105,25 @@
     border-radius: 4px;
     padding: 2px;
     background-color: #fff;
+=======
+    margin-bottom: 0;
+    padding-left: 0;
+    position: static;
+    min-width: 150px;
+}
+.payment-methods li::before {
+    content: none;
+}
+.payment-methods img {
+    width: 36px;
+    height: auto;
+    margin-right: 12px;
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 4px;
+    padding: 3px;
+    background-color: var(--bg-card);
+    object-fit: contain;
+>>>>>>> AVERSION
 }
 .delivery-text p a {
     color: var(--color-primary);
@@ -68,13 +134,32 @@
     text-decoration: underline;
 }
 .delivery-image {
-    opacity: 0;
+    opacity: 0; /* Для анимации появления через JS */
     flex: 0.8;
     text-align: center;
+    min-width: 300px;
 }
 .delivery-image img {
     max-width: 100%;
     height: auto;
+<<<<<<< HEAD
     border-radius: 8px;
     box-shadow: 0 5px 15px var(--color-shadow);
+=======
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+}
+.delivery-text a[href^="tel:"] {
+    /* Ссылка на телефон */
+    color: var(--brand-primary-accent);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+.delivery-text a[href^="tel:"]:hover {
+    text-decoration: underline;
+    color: var(--action-primary-hover);
+>>>>>>> AVERSION
 }

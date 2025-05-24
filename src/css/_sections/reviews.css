@@ -1,4 +1,5 @@
 /* css/_sections/reviews.css */
+<<<<<<< HEAD
 
 .reviews-grid {
     display: grid;
@@ -12,7 +13,26 @@
     border-radius: 8px;
     box-shadow: 0 4px 10px var(--color-shadow);
     border-left: 5px solid var(--color-primary);
+=======
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+    ); /* Чуть уменьшим minmax */
+    gap: 35px;
+}
+.review-item {
+    opacity: 0; /* Для анимации появления через JS */
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    border-left: 6px solid var(--brand-primary-accent);
+>>>>>>> AVERSION
     position: relative;
+    /* Убедимся, что transition для появления управляется JS */
+    /* transition: opacity 0.5s ease-out, transform 0.5s ease-out; */
 }
 .review-item::before {
     content: "“";
@@ -23,6 +43,7 @@
     color: var(--color-primary);
     opacity: 0.15;
     line-height: 1;
+    pointer-events: none; /* Убедимся, что не блокирует взаимодействие */
 }
 .review-item p {
     font-style: italic;
@@ -30,6 +51,7 @@
     color: var(--color-text-muted);
     position: relative;
     z-index: 1;
+<<<<<<< HEAD
     padding-top: 8px;
     font-size: 0.95rem;
 }
@@ -38,4 +60,13 @@
     color: var(--color-text);
     font-weight: 600;
     font-size: 1rem;
+=======
+    padding-top: 10px; /* Чтобы текст не перекрывался псевдоэлементом */
+}
+.review-item h4 {
+    text-align: right;
+    color: var(--text-on-light-primary);
+    font-weight: bold;
+    margin-top: 15px; /* Добавляем отступ сверху */
+>>>>>>> AVERSION
 }

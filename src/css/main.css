@@ -1,18 +1,25 @@
+<<<<<<< HEAD
 @import url("_base/base_styles.css");
 @import url("_base/animations.css");
+=======
+/* Imports */
+@import "_base/base_styles.css";
+@import "_base/animations.css";
 
-@import url("_components/buttons.css");
-@import url("_components/navbar.css");
-@import url("_components/toasts.css");
+@import "_components/buttons.css";
+@import "_components/navbar.css";
+@import "_components/lightbox-overlay.css";
+>>>>>>> AVERSION
 
-@import url("_layout/sections_general.css");
-@import url("_layout/footer.css");
+@import "_layout/footer.css";
+@import "_layout/sections_general.css";
 
-@import url("_sections/hero.css");
-@import url("_sections/about.css");
-@import url("_sections/menu.css");
-@import url("_sections/delivery.css");
-@import url("_sections/reviews.css");
-@import url("_sections/contact.css");
+@import "_sections/about.css";
+@import "_sections/contact.css";
+@import "_sections/delivery.css";
+@import "_sections/hero.css";
+@import "_sections/menu.css";
+@import "_sections/reviews.css";
+@import "_sections/product_page.css";
 
-@import url("_responsive/responsive.css");
+@import "_responsive/responsive.css";

@@ -1,28 +1,55 @@
-// js/modules/scrollAnimator.js
-
 /**
- * Sets up scroll-triggered animations for elements using Intersection Observer.
- * @param {string} selector - The CSS selector for elements to animate.
+ * Настраивает анимации при прокрутке для элементов с использованием Intersection Observer.
+ * @param {string} selector - CSS-селектор для анимируемых элементов.
+ * @param {object} [customOptions] - Пользовательские опции.
+ * @param {number|number[]} [customOptions.threshold=0.15] - Порог видимости.
+ * @param {boolean} [customOptions.unobserveAfterAnimation=true] - Отписываться ли после анимации.
  */
-function setupScrollAnimations(selector) {
+export function setupScrollAnimations(selector, customOptions = {}) {
     const animatedElements = document.querySelectorAll(selector);
 
-    if (animatedElements.length > 0 && "IntersectionObserver" in window) {
+    if (animatedElements.length === 0) return;
+
+    const options = {
+        threshold: 0.15,
+        unobserveAfterAnimation: true,
+        ...customOptions,
+    };
+
+    if ("IntersectionObserver" in window) {
         const observerOptions = {
             root: null,
-            rootMargin: "0px",
-            threshold: 0.15, // Element should be visible by 15%
+            rootMargin: customOptions.rootMargin || "0px",
+            threshold: options.threshold,
         };
 
         const observerCallback = (entries, observer) => {
             entries.forEach((entry) => {
+                const el = entry.target;
                 if (entry.isIntersecting) {
-                    const el = entry.target;
-                    const animationName =
-                        el.dataset.animation || "fadeInUp 1s ease-out forwards";
-                    el.style.animation = animationName;
-                    el.style.opacity = "1"; // Make visible
-                    observer.unobserve(el); // Stop observing once animated
+                    const animationFullName =
+                        el.dataset.animation || "fadeInUp 1s ease-out forwards"; // Анимация по умолчанию
+                    const animationDelay = el.dataset.animationDelay || "0s";
+
+                    // Применяем стили анимации напрямую
+                    const parts = animationFullName.split(" ");
+                    el.style.animationName = parts[0];
+                    el.style.animationDuration = parts[1] || "1s";
+                    el.style.animationTimingFunction = parts[2] || "ease-out";
+                    el.style.animationFillMode = parts[3] || "forwards"; // Важно
+                    el.style.animationDelay = animationDelay;
+
+                    el.style.opacity = "1"; // Делаем элемент видимым
+
+                    if (options.unobserveAfterAnimation) {
+                        observer.unobserve(el);
+                    }
+                } else {
+                    if (!options.unobserveAfterAnimation) {
+                        // Если нужно повторять анимацию, скрываем элемент снова
+                        el.style.opacity = "0";
+                        el.style.animationName = ""; // Сбрасываем анимацию для повторного запуска
+                    }
                 }
             });
         };
@@ -33,11 +60,13 @@ function setupScrollAnimations(selector) {
         );
 
         animatedElements.forEach((el) => {
-            el.style.opacity = "0"; // Initially hide
+            el.style.opacity = "0"; // Изначально скрываем все анимируемые элементы
             scrollObserver.observe(el);
         });
     } else {
-        // Fallback for older browsers or if no elements are found
-        animatedElements.forEach((el) => (el.style.opacity = "1"));
+        // Резервный вариант: просто показываем все элементы
+        animatedElements.forEach((el) => {
+            el.style.opacity = "1";
+        });
     }
 }
